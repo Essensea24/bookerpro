@@ -13,4 +13,16 @@ h1, h2, h3 {
 	background-size: cover;
 	height: 70vh;
 }
+#homepage-float {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+    height: 20vh;
+    position: relative;
+    bottom: 15vh;
+    text-align: center;
+}
+#search-bar {
+	position: relative;
+	top: 7vh;
+}
 
