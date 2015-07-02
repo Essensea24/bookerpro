@@ -1,6 +1,9 @@
 // Place all the styles related to the Statics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	font-family: 'Lato', sans-serif;
+}
 h1, h2, h3 {
 	text-align: center;
 }
@@ -11,14 +14,14 @@ h1, h2, h3 {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	height: 70vh;
+	height: 80vh;
 }
 #homepage-float {
     background-color: rgba(0, 0, 0, 0.6);
-    border-bottom: 2px solid rgba(0, 0, 0, 0.7);
-    height: 20vh;
+    #border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+    height: 15vh;
     position: relative;
-    bottom: 15vh;
+    bottom: 23vh;
     text-align: center;
 }
 #search-bar {
@@ -31,5 +34,6 @@ h1, h2, h3 {
 }
 .search-container {
 	height: 6vh;
+	top: 6vh;
 }
 
