@@ -31,8 +31,7 @@ class RemoteHotel < ActiveRecord::Base
 		    
 		    }
 
-		HTTParty.get("http://api.ean.com/ean-services/rs/hotel/v3/list?",
-		query: query)
+		HTTParty.get(base_uri, query: query)
 	end
 
 end
