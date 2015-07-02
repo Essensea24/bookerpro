@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   get 'searches/destroy'
 
+  resources :sessions 
+
   root 'statics#home'
 
   resources :users
