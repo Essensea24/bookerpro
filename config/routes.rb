@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  root 'statics#home'
+
   resources :users
   get 'users/index'
 
