@@ -1,15 +1,15 @@
-<div class="searchpartial">
+<section class="searchpartial text-center">
   <%= form_tag new_search_path, method: :get do %>
-    <%= text_field_tag :location, nil, placeholder: 'Where would you like to stay?', class: 'col-md-3' %>
-    <div>
+    <%= text_field_tag :location, nil, placeholder: 'Destination', :class => 'search-container' %>
+    <span class="search-container">
     <%= date_field(:user, :born_on) %>
-    </div>
-    <div>
+    </span>
+    <span>
     <%= date_field(:user, :born_on) %>	
-    </div>
-    <div class="col-md-3 searchform">
-    <%= submit_tag "Search",class: 'form-control btn-warning' %>
-  	</div>	
+    </span>
+    <span class="searchform">
+    <%= submit_tag "Search", :class => 'search-container btn-warning' %>
+  	</span>	
   	<% end %>
-</div>
+</section>
 
