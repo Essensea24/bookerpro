@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use Bootstrap Sass
 gem 'bootstrap-sass', '~> 3.3.4'
 
+gem 'httparty', '0.11.0'
+
 # User jQuery Turbolinks so that jQuery works on first page load
 gem 'jquery-turbolinks'
 
