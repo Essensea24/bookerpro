@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   get 'searches/show'
 
-  get 'searches/new' => 'searches#new' as: :new_search
+  get 'searches/new' => 'searches#new', as: :new_search
 
   get 'searches/create'
 
