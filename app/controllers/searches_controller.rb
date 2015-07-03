@@ -1,12 +1,11 @@
 class SearchesController < ApplicationController
-  require 'search'
   
   def show
   end
 
   def new
-    @response = RemoteHotel.find
-
+    response = RemoteHotel.find(params[:destinationString], params[:arrivalDate], params[:departureDate])
+    @hotels = response["HotelListResponse"]["HotelList"]["HotelSummary"]
   end
 
   def create

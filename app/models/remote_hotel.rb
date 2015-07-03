@@ -3,10 +3,7 @@ class RemoteHotel < ActiveRecord::Base
 
 	base_uri "http://api.ean.com/ean-services/rs/hotel/v3/list?"
 
-	# def initialize()
-	# end
-
-	def self.find
+	def self.find(destinationString, arrivalDate, departureDate)
 
 		query = 
 		    { 
@@ -15,11 +12,9 @@ class RemoteHotel < ActiveRecord::Base
 		      "apiKey"=> "cbrzfta369qwyrm9t5b8y8kf",
 		      "locale" => "en_US", 
 		      "curencyCode" => "USD",
-		      "city" => "Seattle",
-		      "stateProvinceCode" => "WA",
-		      "countryCode" => "US",
-		      "arrivalDate" => "8/1/2015",
-		      "departureDate" => "8/3/2015",
+		      "destinationString" => destinationString,
+		      "arrivalDate" => arrivalDate,
+		      "departureDate" => departureDate,
 		      "RoomGroup" => 
 		      				{ 
 		                	"Room" =>
@@ -27,8 +22,7 @@ class RemoteHotel < ActiveRecord::Base
 		                        "numberOfAdults" => 2
 		                        }
 		                	},
-		      "numberOfResults" => 25
-		    
+		      "numberOfResults" => 2
 		    }
 
 		HTTParty.get(base_uri, query: query)
