@@ -27,7 +27,7 @@ class RemoteHotel < ActiveRecord::Base
 		                        "numberOfAdults" => 2
 		                        }
 		                	},
-		      "numberOfResults" => 1
+		      "numberOfResults" => 25
 		    
 		    }
 

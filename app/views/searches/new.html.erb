@@ -1,1 +1,3 @@
-<%= @response %>
+<% @response["HotelListResponse"]["HotelList"]["HotelSummary"].each do |hotel| %>
+	<%= hotel["name"] %><br><hr>
+<% end %>
