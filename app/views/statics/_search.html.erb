@@ -2,10 +2,10 @@
   <%= form_tag new_search_path, method: :get do %>
     <%= text_field_tag :destinationString, nil, placeholder: 'Destination', :class => 'search-container' %>
     <span class="search-container">
-    <%= select_date(:arrivalDate, order: [:day, :month, :year])%>
+    <%= text_field_tag(:arrivalDate)%>
     </span>
     <span>
-    <%= select_date(:departureDate, order: [:day, :month, :year])%>
+    <%= text_field_tag(:departureDate) %>	
     </span>
     <span class="searchform">
     <%= submit_tag "Search", :class => 'search-container btn-warning' %>
