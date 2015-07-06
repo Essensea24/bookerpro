@@ -16,7 +16,12 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700,700italic,900italic);
 @import "bootstrap-sprockets";
 @import "bootstrap";
+<<<<<<< HEAD
 /* adds 7vh to the body because of the bootstrap fixed navbar */
+=======
+@import 'bootstrap-datetimepicker';
+
+>>>>>>> master
 body {
 	padding-top: 7vh;
 }

@@ -18,6 +18,9 @@ gem 'bootstrap-sass', '~> 3.3.4'
 
 gem 'httparty', '0.11.0'
 
+gem 'momentjs-rails', '>= 2.8.1'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.14.30'
+
 # User jQuery Turbolinks so that jQuery works on first page load
 gem 'jquery-turbolinks'
 
