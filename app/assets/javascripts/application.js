@@ -17,8 +17,8 @@
 //= require bootstrap-datetimepicker
 //= require_tree .
 
-$.fn.datepicker.defaults.format = "mm/dd/yyyy";
 $('.datepicker').datepicker({
     autoclose: true,
     todayHighlight: true
 })
+
