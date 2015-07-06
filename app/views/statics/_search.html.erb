@@ -2,14 +2,15 @@
   <%= form_tag new_search_path, method: :get do %>
     <%= text_field_tag :destinationString, nil, placeholder: 'Destination', :class => 'search-container' %>
     <span class="search-container">
-    <%= select_date(:arrivalDate, order: [:day, :month, :year])%>
-    </span>
-    <span>
-    <%= select_date(:departureDate, order: [:day, :month, :year])%>
-    </span>
+
+    <%= text_field_tag :arrivalDate, nil, placeholder: 'MM/DD/YYYY', :data => {:provide => "datepicker"}, :class => 'search-container'  %>
+    <%= text_field_tag :departureDate, nil, placeholder: 'MM/DD/YYYY', :data => {:provide => "datepicker"}, :class => 'search-container'  %>
+
+
     <span class="searchform">
     <%= submit_tag "Search", :class => 'search-container btn-warning' %>
   	</span>	
   	<% end %>
 </section>
 
+  
