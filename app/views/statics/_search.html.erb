@@ -2,31 +2,10 @@
   <%= form_tag new_search_path, method: :get do %>
     <%= text_field_tag :destinationString, nil, placeholder: 'Destination', :class => 'search-container' %>
     <span class="search-container">
-    </span>
-    <span>
-    <%= text_field_tag(:departureDate) %>	
-    </span>
-    <%= date_select(:arrivalDate)%>
 
-    <div class="container">
-      <div class="row">
-          <div class='col-md-3'>
-              <div class="form-group">
-                  <div class='input-group date' id='datetimepicker1'>
-                      <input type='text' class="form-control" />
-                      <span class="input-group-addon">
-                          <span class="glyphicon glyphicon-calendar"></span>
-                      </span>
-                  </div>
-              </div>
-          </div>
-          <script type="text/javascript">
-              $(function () {
-                  $('#datetimepicker1').datetimepicker();
-              });
-          </script>
-      </div>
-  </div>
+    <%= text_field_tag :arrivalDate, nil, placeholder: 'MM/DD/YYYY', :data => {:provide => "datepicker"} %>
+    <%= text_field_tag :departureDate, nil, placeholder: 'MM/DD/YYYY', :data => {:provide => "datepicker"} %>
+
 
     <span class="searchform">
     <%= submit_tag "Search", :class => 'search-container btn-warning' %>
