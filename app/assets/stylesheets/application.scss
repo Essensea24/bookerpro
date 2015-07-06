@@ -16,14 +16,13 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700,700italic,900italic);
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+/* adds 7vh to the body because of the bootstrap fixed navbar */
 body {
-	padding-top: 5vh;
+	padding-top: 7vh;
 }
-.navbar {
-	background-color: rgba(0, 0, 0, 0.8);
-    border-bottom: 2px solid rgba(0, 0, 0, 0.7);
-	width: 100vw;
-	height: 5vh;
+/* adds google font rale way to the nav bar booker pro text */
+#booker-logo {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
 }
 
