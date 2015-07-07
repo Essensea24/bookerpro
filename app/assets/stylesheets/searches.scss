@@ -1,6 +1,7 @@
 // Place all the styles related to the searches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 #search-padding {
 	padding-top: 4vh;
 	padding-left: 1vw;
@@ -15,6 +16,7 @@
 	position: relative;
 	left: 60vw;
 	width: 40vw;
+	position: relative;
 	bottom: 3vh;
 }
 .relative-column {
@@ -25,4 +27,3 @@
 .map-wrapper {
 	position: fixed;
 }
-
