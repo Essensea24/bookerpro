@@ -1,16 +1,20 @@
 <div id="search-padding" class="row">
-<div class="col-md-7">
-	<% @hotels.each do |hotel| %>
-		<div class="search-org">
-			<div class="col-md-6">
-				<%= hotel["name"] %><br><hr>
-			</div>
-			<div class="col-md-6">
-				<%= hotel["name"] %><br><hr>
-			</div>
+	<div class="col-md-12">
+		<div class="col-md-7 relative-column">
+			<% @hotels.each do |hotel| %>
+				<div class="search-org">
+					<div class="col-md-6 search-results">
+						<%= hotel["name"] %><br><hr>
+					</div>
+					<div class="col-md-6 search-results">
+						<%= hotel["name"] %><br><hr>
+					</div>
+				</div>
+			<% end %>	
 		</div>
-	<% end %>
-	
+		<div class="fixed-column">
+			<div id="google-map" class="col-md-5"></div>
+		</div>
+	</div>
 </div>
-<div id="google-map" class="col-md-5"></div>
-</div>
+
