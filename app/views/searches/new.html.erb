@@ -3,10 +3,17 @@
 			<% @hotels.each do |hotel| %>
 				<!-- <div class="search-org"> -->
 					<div class="col-md-6 search-results">
-						<%= hotel["name"] %><br><hr>
+						<%= hotel["name"] %><br>
+						<%= hotel["city"] %><br>
+						<%= hotel["hotelRating"]*2 %><span> / 10<br>
+						<img src="http://media.expedia.com<%= hotel["thumbNailUrl"] %>" width="100px" /><br><hr>
 					</div>
 					<div class="col-md-6 search-results">
 						<%= hotel["latitude"] %><br><hr>
+						<%= hotel["name"] %><br>
+						<%= hotel["city"] %><br>
+						<%= hotel["hotelRating"]*2 %><span> / 10</span><br>
+						<img src="http://media.expedia.com<%= hotel["thumbNailUrl"] %>" width="100px" /><br><hr>
 					</div>
 				<!-- </div> -->
 			<% end %>	
@@ -16,5 +23,8 @@
 		</div>
 </div>
 
+
 <%= @hotels %>
+<%= @hotels.inspect %>
+
 
