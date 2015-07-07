@@ -51,7 +51,7 @@ function initialize_my_map() {
 			map.fitBounds(bounds);
 	       	markers.push(marker)
 	       	marker.content = "abc"
-	       	google.maps.event.addListener(marker, 'click', function(marker) {
+	       	google.maps.event.addListener(marker, 'click', function(marker, event) {
 	            infowindow.setContent(marker.content);
 	            infowindow.open(map, marker);
 	        });

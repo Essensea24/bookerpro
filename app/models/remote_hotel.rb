@@ -22,7 +22,7 @@ class RemoteHotel < ActiveRecord::Base
 		                        "numberOfAdults" => 2
 		                        }
 		                	},
-		      "numberOfResults" => 2
+		      "numberOfResults" => 20
 		    }
 
 		HTTParty.get(base_uri, query: query)

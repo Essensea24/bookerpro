@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #search-padding {
-	padding-top: 4vh;
+	padding-top: 3vh;
 	padding-left: 1vw;
 }
 .search-org {
@@ -14,7 +14,6 @@
 #google-map {
 	height: 100vh;
 	position: relative;
-	left: 60vw;
 	width: 40vw;
 	position: relative;
 	bottom: 3vh;
@@ -26,4 +25,5 @@
 }
 .map-wrapper {
 	position: fixed;
+	right: 0;
 }
