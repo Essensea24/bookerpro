@@ -1,7 +1,16 @@
-<div id="search-padding">
-
+<div id="search-padding" class="row">
+<div class="col-md-7">
 	<% @hotels.each do |hotel| %>
-		<%= hotel["name"] %><br><hr>
+		<div class="search-org">
+			<div class="col-md-6">
+				<%= hotel["name"] %><br><hr>
+			</div>
+			<div class="col-md-6">
+				<%= hotel["name"] %><br><hr>
+			</div>
+		</div>
 	<% end %>
 	
+</div>
+<div class="col-md-5 google-map"></div>
 </div>
