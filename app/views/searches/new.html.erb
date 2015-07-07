@@ -6,14 +6,13 @@
 						<%= hotel["name"] %><br>
 						<%= hotel["city"] %><br>
 						<%= hotel["hotelRating"]*2 %><span> / 10<br>
-						<img src="http://media.expedia.com<%= hotel["thumbNailUrl"] %>" width="100px" /><br><hr>
+						<img src="http://media.expedia.com<%= hotel["thumbNailUrl"] %>" /><br><hr>
 					</div>
 					<div class="col-md-6 search-results">
-						<%= hotel["latitude"] %><br><hr>
 						<%= hotel["name"] %><br>
 						<%= hotel["city"] %><br>
 						<%= hotel["hotelRating"]*2 %><span> / 10</span><br>
-						<img src="http://media.expedia.com<%= hotel["thumbNailUrl"] %>" width="100px" /><br><hr>
+						<img src="http://media.expedia.com<%= hotel["thumbNailUrl"] %>" class="hotel-image" width="200" height="150" /><br><hr>
 					</div>
 				<!-- </div> -->
 			<% end %>	
@@ -24,7 +23,7 @@
 </div>
 
 
-<%= @hotels %>
+<%#= @hotels %>
 <%= @hotels.inspect %>
 
 
