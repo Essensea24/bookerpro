@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+img {
+	vertical-align: middle;
+	border: 0;
+}
 #search-padding {
 	padding-top: 3vh;
 	padding-left: 1vw;
@@ -26,4 +30,9 @@
 .map-wrapper {
 	position: fixed;
 	right: 0;
+}
+.hotel-image {
+	position: relative;
+	border: 0;
+
 }
