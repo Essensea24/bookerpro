@@ -1,10 +1,10 @@
 // Place all the styles related to the searches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 #search-padding {
 	padding-top: 4vh;
 	padding-left: 1vw;
-	padding-right: 1vw;
 }
 .search-org {
 	background-color: #999;
@@ -14,14 +14,17 @@
 	position: relative;
 }
 #google-map {
-	border: 2px solid black;
+	position: relative;
+	left: 60vw;
+	width: 40vw;
 	height: 100vh;
-	position: fixed;
-	overflow: hidden;
-	right: 0;
-	top: 0;
+	bottom: 3vh;
 }
 .relative-column {
 	position: relative;
+	width: 100vw;
+	height: 100vh;
 }
-
+.map-wrapper {
+	position: fixed;
+}
