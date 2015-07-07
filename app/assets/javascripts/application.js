@@ -59,6 +59,5 @@ function initialize_my_map() {
 	    (marker, i);
 	})
 
-
 }
 
