@@ -1,17 +1,24 @@
+<body onload="initialize()">
 <section class="searchpartial text-center">
   <%= form_tag new_search_path, method: :get do %>
-  	<%= render 'filter' %>
-    <%= text_field_tag :destinationString, nil, placeholder: 'Destination', :id => 'pac-input', :class => 'search-container' %>
+  	<div id="locationField">
+        <%= text_field_tag :destinationString, nil, placeholder: 'Destination', :id => 'autocomplete', :onFocus => 'geolocate()', :class => 'search-container' %>
+    </div>
     <span class="search-container">
 
-    <%= text_field_tag :arrivalDate, nil, placeholder: 'MM/DD/YYYY', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
-    <%= text_field_tag :departureDate, nil, placeholder: 'MM/DD/YYYY', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
-
-
-    <span class="searchform">
-    <%= submit_tag "Search", :class => 'search-container btn-warning' %>
-  	</span>	
+	    <%= text_field_tag :arrivalDate, nil, placeholder: 'MM/DD/YYYY', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
+	    <%= text_field_tag :departureDate, nil, placeholder: 'MM/DD/YYYY', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
+	    <%= submit_tag "Search", :class => 'search-container btn-warning' %>
+	</span>	
   	<% end %>
 </section>
+</body>
+
+<script>
+function initialize() {
+  autocomplete = new google.maps.places.Autocomplete(
+      /** @type {HTMLInputElement} */(document.getElementById('autocomplete')));
+}
+</script>
 
   
