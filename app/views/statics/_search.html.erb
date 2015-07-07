@@ -1,6 +1,7 @@
 <section class="searchpartial text-center">
   <%= form_tag new_search_path, method: :get do %>
-    <%= text_field_tag :destinationString, nil, placeholder: 'Destination', :class => 'search-container' %>
+  	<%= render 'filter' %>
+    <%= text_field_tag :destinationString, nil, placeholder: 'Destination', :id => 'pac-input', :class => 'search-container' %>
     <span class="search-container">
 
     <%= text_field_tag :arrivalDate, nil, placeholder: 'MM/DD/YYYY', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>

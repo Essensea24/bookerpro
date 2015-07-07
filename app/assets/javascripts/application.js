@@ -21,6 +21,7 @@ google.maps.event.addDomListener(window, 'page:load', initialize_my_map)
 
 function initialize_my_map() {
 
+	var autocomplete = new google.maps.places.Autocomplete(input,options)
 	
     console.log (window.location.origin)
     console.log (window.location.pathname)
