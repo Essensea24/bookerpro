@@ -1,18 +1,16 @@
-<%#= @detail.to_json %>
+<%#= @detail %>
 <%#= @detail["HotelInformationResponse"]["HotelDetails"] %>
 
 <h1 class="text-center">Hotel Information</h1>
-
 <table class="table table-hover table-striped table-condensed table-bordered">
   <thead>
     <tr class="row-margin">
       <th>Hotel Name</th>
-      <th>CheckIn Time</th>
-      <th>CheckOut Time</th>
-      <th>CheckIn Instructions</th>
-      <th>Know Before You Go Description<th>
-      <th>Property Information</th>
-      <th>Business Amenities</th>
+      <th>Property Amenities</th>
+	  <th>Business Amenities</th>
+	  <th>Dining</th>
+	  <th>Services</th>
+	  <th>Rooms</th>
       <th colspan="9"></th>
     </tr>
   </thead>
@@ -20,13 +18,35 @@
   <tbody>
       <tr>
         <td><%= @detail["HotelSummary"]["name"]%></td>
-        <td><%= @detail["HotelDetails"]["checkInTime"] %></td>
-        <td><%= @detail["HotelDetails"]["checkOutTime"] %></td>
-        <td><%= @detail["HotelDetails"]["checkInInstructions"] %></td>
-        <td><%= @detail["HotelDetails"]["knowBeforeYouGoDescription"] %></td>
-        <td></td>
-        <td><%= @detail["HotelDetails"]["propertyInformation"] %></td>
+        <td><!-- Property Amenities & services -->
+			<% @detail["PropertyAmenities"]["PropertyAmenity"].each do |property| %>
+				<%= property["amenity"] %><br>
+			<% end %></td>
         <td><%= @detail["HotelDetails"]["businessAmenitiesDescription"] %></td>
+        <td><%= @detail["HotelDetails"]["diningDescription"] %></td>
+        <td><%= @detail["HotelDetails"]["amenitiesDescription"] %></td>
+        <td><%= @detail["HotelDetails"]["roomDetailDescription"] %></td>
+      </tr>
+  </tbody>
+</table>
+
+<h1 class="text-center">Check-In Information</h1>
+
+<table class="table table-hover table-striped table-condensed table-bordered">
+  <thead>
+    <tr class="row-margin">
+      <th>Property Information</th>
+      <th>CheckIn Instructions</th>
+      <th>Hotel Policy</th>
+      <th colspan="6"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%= @detail["HotelDetails"]["propertyInformation"] %></td>
+        <td><%= @detail["HotelDetails"]["checkInInstructions"] %></td>
+        <td><%= @detail["HotelDetails"]["hotelPolicy"] %></td>
       </tr>
   </tbody>
 </table>
@@ -37,7 +57,7 @@
   <thead>
   	<tr class="row-margin">
   	  <th>Room Type</th>
-      <th>Amenities</th>
+      <th>Room Amenities</th>
   	</tr>
   </thead>
   <tbody>
