@@ -20,9 +20,6 @@ google.maps.event.addDomListener(window, 'load', initialize_my_map)
 google.maps.event.addDomListener(window, 'page:load', initialize_my_map)
 
 function initialize_my_map() {
-
-
-
     console.log (window.location.origin)
     console.log (window.location.pathname)
     var url = window.location.origin + window.location.pathname + ".json" +  window.location.search 
@@ -51,10 +48,10 @@ function initialize_my_map() {
 	        bounds.extend(markerPosition);
 			map.fitBounds(bounds);
 	       	markers.push(marker)
-	       	marker.content = "abc"
-	       	google.maps.event.addListener(marker, 'click', function(marker, event) {
-	            infowindow.setContent(marker.content);
-	            infowindow.open(map, marker);
+	       	google.maps.event.addListener(markers[i], 'click', function() {
+	            infowindow.setContent(this.html);
+	            infowindow.open(map, this);
+	            console.log(this)
 	        });
         }
 	    (marker, i);
