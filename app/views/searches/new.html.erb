@@ -5,7 +5,7 @@
 
 					<div class="col-md-6 search-results">
 						<div class="hotel-container">
-							<br>
+						<br>
 							<div id="image-overflow">
 								<img src="http://media.expedia.com<%= hotel["thumbNailUrl"][0...-5] + "b.jpg" %>" />
 								<div class="price-box">
@@ -14,9 +14,9 @@
 								</div>
 							</div>
 
-								<span id="booker-logo" class="hotel-info"><%= hotel["name"] %></span>
+								<span id="booker-logo" class="title-name"><%= hotel["name"] %></span>
 							<br>
-								<span id="booker-logo" class="hotel-info"><%= hotel["hotelRating"] %> star hotel</span>
+								<span id="booker-logo" class="hotel-info"><%= hotel["hotelRating"] %> star hotel  | </span>
 							<%= link_to "Book Now",show_hotel_path(:hotelId => hotel["hotelId"]) %>
 						</div>
 						<hr>
