@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  get 'searches/show'
+  get 'hotels/show' => 'searches#show', as: :show_hotel
 
   get 'searches/new' => 'searches#new', as: :new_search
 
