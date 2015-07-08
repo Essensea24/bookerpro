@@ -1,13 +1,11 @@
+<div class="col-md-7 filter-container">
+	<%= render 'filter' %>
+</div>
+
 <div id="search-padding" class="row">
 		<div class="col-md-7 relative-column">
 			<% @hotels.each do |hotel| %>
 				<!-- <div class="search-org"> -->
-					<div class="col-md-6 search-results">
-					<img src="http://media.expedia.com<%= hotel["thumbNailUrl"][0...-5] + "b.jpg" %>" width="300vw" height="200vh" /><br>
-						<span id="booker-logo"><%= hotel["name"] %></span><br>
-						<span id="booker-logo"><%= hotel["hotelRating"] %> star hotel</span>
-						<%= link_to "Book Now",show_hotel_path(:hotelId => hotel["hotelId"]), :class => "btn btn-success" %><hr>
-					</div>
 					<div class="col-md-6 search-results">
 					<img src="http://media.expedia.com<%= hotel["thumbNailUrl"][0...-5] + "b.jpg" %>" width="300vw" height="200vh" /><br>
 						<span id="booker-logo"><%= hotel["name"] %></span><br>
