@@ -1,0 +1,27 @@
+<% @hotels.each do |hotel| %>
+
+	<div class="col-md-6 search-results">
+		<%= link_to show_hotel_path(:hotelId => hotel["hotelId"], :class => "link-underline") do %>
+			<div class="hotel-container">
+				<br>
+			
+				<div id="image-overflow" class="grow">
+					<img src="http://media.expedia.com<%= hotel["thumbNailUrl"][0...-5] + "b.jpg" %>" />
+					<div class="price-box">
+						<span id="booker-logo" class="price-info">$<%= hotel["lowRate"].round(0) %>
+						</span>
+					</div>
+				</div>
+
+				<span id="booker-logo" class="title-name"><%= hotel["name"] %></span>
+
+					<br>
+
+				<span id="booker-logo" class="hotel-info"><%= hotel["hotelRating"] %> star hotel  | </span>
+
+				<%= link_to "Book Now",show_hotel_path(:hotelId => hotel["hotelId"]) %>
+			</div>
+		<% end %>
+			<hr>
+	</div>
+<% end %>	
