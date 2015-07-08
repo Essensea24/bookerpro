@@ -3,13 +3,13 @@
 			<% @hotels.each do |hotel| %>
 				<!-- <div class="search-org"> -->
 					<div class="col-md-6 search-results">
-					<img src="http://media.expedia.com<%= hotel["thumbNailUrl"][0...-5] + "b.jpg" %>" width="300vw" height="200vh" /><br>
+					<div id="image-overflow"><img src="http://media.expedia.com<%= hotel["thumbNailUrl"][0...-5] + "b.jpg" %>" /></div><br>
 						<span id="booker-logo"><%= hotel["name"] %></span><br>
 						<span id="booker-logo"><%= hotel["hotelRating"] %> star hotel</span>
 						<%= link_to "Book Now",show_hotel_path(:hotelId => hotel["hotelId"]), :class => "btn btn-success" %><hr>
 					</div>
 					<div class="col-md-6 search-results">
-					<img src="http://media.expedia.com<%= hotel["thumbNailUrl"][0...-5] + "b.jpg" %>" width="300vw" height="200vh" /><br>
+					<div id="image-overflow"><img src="http://media.expedia.com<%= hotel["thumbNailUrl"][0...-5] + "b.jpg" %>" /></div><br>
 						<span id="booker-logo"><%= hotel["name"] %></span><br>
 						<span id="booker-logo"><%= hotel["hotelRating"] %> star hotel</span>
 						<%= link_to "Book Now",show_hotel_path(:hotelId => hotel["hotelId"]), :class => "btn btn-success" %><hr>
