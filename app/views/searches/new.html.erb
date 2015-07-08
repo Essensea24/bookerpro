@@ -3,15 +3,15 @@
 			<% @hotels.each do |hotel| %>
 				<!-- <div class="search-org"> -->
 					<div class="col-md-6 search-results">
-						<%= hotel["name"] %><br>
-						<%= hotel["city"] %><br>
-						<%= hotel["hotelRating"]*2 %><span> / 10<br>
+						<span id="booker-logo"><%= hotel["name"] %></span><br>
+						<span id="booker-logo"><%= hotel["city"] %></span><br>
+						<span id="booker-logo"><%= hotel["hotelRating"] %> star hotel</span><br>
 						<img src="http://media.expedia.com<%= hotel["thumbNailUrl"] %>" /><br><hr>
 					</div>
 					<div class="col-md-6 search-results">
-						<%= hotel["name"] %><br>
-						<%= hotel["city"] %><br>
-						<%= hotel["hotelRating"]*2 %><span> / 10</span><br>
+						<span id="booker-logo"><%= hotel["name"] %></span><br>
+						<span id="booker-logo"><%= hotel["city"] %></span><br>
+						<span id="booker-logo"><%= hotel["hotelRating"] %> star hotel</span><br>
 						<img src="http://media.expedia.com<%= hotel["thumbNailUrl"] %>" class="hotel-image" width="200" height="150" /><br><hr>
 						<%= link_to "Book Now",show_hotel_path(:hotelId => hotel["hotelId"]) %>
 					</div>
