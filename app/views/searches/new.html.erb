@@ -6,7 +6,7 @@
 						<%= hotel["name"] %><br>
 						<%= hotel["city"] %><br>
 						<%= hotel["hotelRating"]*2 %><span> / 10<br>
-						<img src="http://media.expedia.com<%= hotel["thumbNailUrl"] %>" /><br><hr>
+						<img src="http://media.expedia.com<%= hotel["thumbNailUrl"][0...-5] + "b.jpg" %>" /><br><hr>
 					</div>
 					<div class="col-md-6 search-results">
 						<%= hotel["name"] %><br>
