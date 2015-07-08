@@ -13,10 +13,13 @@
 						<span id="booker-logo"><%= hotel["hotelRating"] %> star hotel</span>
 						<%= link_to "Book Now",show_hotel_path(:hotelId => hotel["hotelId"]), :class => "btn btn-success" %><hr>
 					<%= link_to show_hotel_path(:hotelId => hotel["hotelId"]) do %>
+
+					<%= link_to show_hotel_path(:hotelId => hotel["hotelId"], :class => "link-underline") do %>
+
 						<div class="hotel-container">
 						<br>
 						
-							<div id="image-overflow">
+							<div id="image-overflow" class="grow">
 								<img src="http://media.expedia.com<%= hotel["thumbNailUrl"][0...-5] + "b.jpg" %>" />
 								<div class="price-box">
 									<span id="booker-logo" class="price-info">$<%= hotel["lowRate"].round(0) %>
