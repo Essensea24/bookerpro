@@ -1,12 +1,12 @@
   #locationField, #controls {
         position: relative;
-        width: 480px;
+        width: 300px
       }
       #autocomplete {
-        position: absolute;
         top: 0px;
         left: 0px;
         width: 99%;
+        height: 6vh;
       }
       .label {
         text-align: right;
@@ -16,6 +16,6 @@
       }
      
       #locationField {
-        height: 20px;
+        height: 6vh;
         margin-bottom: 2px;
       }

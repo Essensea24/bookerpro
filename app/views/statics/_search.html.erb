@@ -4,12 +4,11 @@
   	<div id="locationField">
         <%= text_field_tag :destinationString, nil, placeholder: 'Destination', :id => 'autocomplete', :onFocus => 'geolocate()', :class => 'search-container' %>
     </div>
-    <span class="search-container">
 
 	    <%= text_field_tag :arrivalDate, nil, placeholder: 'MM/DD/YYYY', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
 	    <%= text_field_tag :departureDate, nil, placeholder: 'MM/DD/YYYY', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
 	    <%= submit_tag "Search", :class => 'search-container btn-warning' %>
-	</span>	
+
   	<% end %>
 </section>
 </body>
