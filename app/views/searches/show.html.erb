@@ -1,1 +1,22 @@
-<%= @detail %>
+<br><br><br><%= @detail["HotelInformationResponse"]["HotelSummary"]["name"] %>
+<br><hr>
+
+<%#= @detail.to_json %>
+<br><br><br><br><hr>
+<%#= @detail["HotelInformationResponse"]["HotelDetails"] %><br>
+
+<%= @detail["HotelInformationResponse"]["HotelDetails"]["checkInTime"] %><br>
+<%= @detail["HotelInformationResponse"]["HotelDetails"]["checkOutTime"] %><br>
+<%= @detail["HotelInformationResponse"]["HotelDetails"]["checkInInstructions"] %><br>
+<%= @detail["HotelInformationResponse"]["HotelDetails"]["roomInformation"] %><br>
+<%= @detail["HotelInformationResponse"]["HotelDetails"]["knowBeforeYouGoDescription"] %><br>
+<%= @detail["HotelInformationResponse"]["HotelDetails"]["propertyInformation"] %><br>
+<%= @detail["HotelInformationResponse"]["HotelDetails"]["businessAmenitiesDescription"] %><br><br><br><br>
+
+
+<% @detail["HotelInformationResponse"]["RoomTypes"]["RoomType"].each do |detail| %>
+	<strong><%= detail["description"] %></strong><br>
+	<% detail["roomAmenities"]["RoomAmenity"].each do |amenity| %>
+		<%= amenity["amenity"] %>
+	<% end %><br>
+<% end %>
