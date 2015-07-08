@@ -1,22 +1,59 @@
-<br><br><br><%= @detail["HotelInformationResponse"]["HotelSummary"]["name"] %>
-<br><hr>
-
 <%#= @detail.to_json %>
-<br><br><br><br><hr>
-<%#= @detail["HotelInformationResponse"]["HotelDetails"] %><br>
+<%#= @detail["HotelInformationResponse"]["HotelDetails"] %>
 
-<%= @detail["HotelInformationResponse"]["HotelDetails"]["checkInTime"] %><br>
-<%= @detail["HotelInformationResponse"]["HotelDetails"]["checkOutTime"] %><br>
-<%= @detail["HotelInformationResponse"]["HotelDetails"]["checkInInstructions"] %><br>
-<%= @detail["HotelInformationResponse"]["HotelDetails"]["roomInformation"] %><br>
-<%= @detail["HotelInformationResponse"]["HotelDetails"]["knowBeforeYouGoDescription"] %><br>
-<%= @detail["HotelInformationResponse"]["HotelDetails"]["propertyInformation"] %><br>
-<%= @detail["HotelInformationResponse"]["HotelDetails"]["businessAmenitiesDescription"] %><br><br><br><br>
+<h1 class="text-center">Hotel Information</h1>
 
+<table class="table table-hover table-striped table-condensed table-bordered">
+  <thead>
+    <tr class="row-margin">
+      <th>Hotel Name</th>
+      <th>CheckIn Time</th>
+      <th>CheckOut Time</th>
+      <th>CheckIn Instructions</th>
+      <th>Know Before You Go Description<th>
+      <th>Property Information</th>
+      <th>Business Amenities</th>
+      <th colspan="9"></th>
+    </tr>
+  </thead>
 
-<% @detail["HotelInformationResponse"]["RoomTypes"]["RoomType"].each do |detail| %>
-	<strong><%= detail["description"] %></strong><br>
-	<% detail["roomAmenities"]["RoomAmenity"].each do |amenity| %>
-		<%= amenity["amenity"] %>
-	<% end %><br>
-<% end %>
+  <tbody>
+      <tr>
+        <td><%= @detail["HotelInformationResponse"]["HotelSummary"]["name"]%></td>
+        <td><%= @detail["HotelInformationResponse"]["HotelDetails"]["checkInTime"] %></td>
+        <td><%= @detail["HotelInformationResponse"]["HotelDetails"]["checkOutTime"] %></td>
+        <td><%= @detail["HotelInformationResponse"]["HotelDetails"]["checkInInstructions"] %></td>
+        <td><%= @detail["HotelInformationResponse"]["HotelDetails"]["knowBeforeYouGoDescription"] %></td>
+        <td></td>
+        <td><%= @detail["HotelInformationResponse"]["HotelDetails"]["propertyInformation"] %></td>
+        <td><%= @detail["HotelInformationResponse"]["HotelDetails"]["businessAmenitiesDescription"] %></td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 class="text-center">Room Information</h1>
+
+<table class="table table-hover table-striped table-condensed table-bordered">
+  <thead>
+  	<tr class="row-margin">
+  	  <th>Room Type</th>
+      <th>Amenities</th>
+  	</tr>
+  </thead>
+  <tbody>
+	<!-- Room types -->
+	<% @detail["HotelInformationResponse"]["RoomTypes"]["RoomType"].each do |detail| %>  
+	  	<tr>
+	  		<td>
+	  			<%= detail["description"] %>
+	  		</td>
+	  		<!-- Room amenities -->
+	  		<td>
+		  		<% detail["roomAmenities"]["RoomAmenity"].each do |amenity| %>
+		  			<%= amenity["amenity"] %><br>
+		  		<% end %>
+	  		</td>
+	  	</tr>
+  	<% end %>
+  </tbody>
+</table>
