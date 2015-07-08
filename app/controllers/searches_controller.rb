@@ -1,7 +1,7 @@
 class SearchesController < ApplicationController
   
   def show
-    @detail = ShowRemote.find(params[:hotelId])
+    @detail = ShowRemote.find(params[:hotelId], params[:options])
   end
 
   def new

@@ -1,5 +1,5 @@
 class ShowRemote < ActiveRecord::Base
-	require HTTParty
+	include HTTParty
 
 	base_uri "https://book.api.ean.com/ean-services/rs/hotel/v3/info?"
 
