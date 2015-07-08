@@ -41,8 +41,15 @@ img {
 }
 #image-overflow img {
 	width: 300px;
-	height: 200px;
+	height: 220px;
 	box-shadow: 10px 10px 5px #888888;
+}
+/* .grow increases results images by .1 on hover */
+.grow {
+	transition: all .2s ease-in-out;
+}
+.grow:hover { 
+	transform: scale(1.1);
 }
 .hotel-container {
 	text-align: center;
@@ -50,17 +57,11 @@ img {
 	width: 350px;
 }
 .hotel-container:hover {
-	background-color: rgba(0,0,0,0.1);
-	cursor: pointer;
-	cursor: hand;
+	/*background-color: rgba(0,0,0,0.1);*/
 }
 .price-info {
 	font-size: 20px;
 	color: white;
-	position: relative;
-	/*bottom: 50px;
-	right: 125px;*/
-	overflow: hidden;
 }
 .price-box {
 	background-color: rgba(0,0,0,0.8);
@@ -74,9 +75,4 @@ img {
 	font-size: 20px;
 	text-decoration: none;
 }
-.title-name {
-	color: black;
-	font-size: 20px;
-}
-
 
