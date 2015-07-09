@@ -1,12 +1,29 @@
 <%#= @detail %>
-<%#= @detail["HotelInformationResponse"]["HotelDetails"] %>
+<%#= @detail["HotelSummary"] %>
+	<!-- "name", "address1", "city", "stateProvinceCode", "postalCode", "countryCode", "hotelRating", "hotelRatingDisplay", "tripAdvisorRating", "tripAdvisorReviewCount", "tripAdvisorRatingUrl", "locationDescription", "highRate", "lowRate", "latitude", "longitude" -->
+<%#= @detail["HotelDetails"] %>
+	<!-- "numberOfRooms", "numberOfFloors", "checkInTime", "checkOutTime", "propertyInformation", "areaInformation", "hotelPolicy", "roomInformation", "drivingDirections", "checkInInstructions", "knowBeforeYouGoDescription", 
+	"mandatoryFeesDescription", "locationDescription", "roomFeesDescription", "diningDescription", "amenitiesDescription", "businessAmenitiesDescription", "roomDetailDescription"  -->
 
+
+<h1 class="text-center">Hotel Information</h1>
+<%#= @detail["Suppliers"] %>
+
+<!-- Used in a loop -->
+	<%#= @detail["RoomTypes"]["RoomType"] %>
+	<%#= @detail["PropertyAmenities"]["PropertyAmenity"] %>
+	<%#= @detail["HotelImages"]["HotelImage"] %>
 <div class="hotelshow-container">
 </div>
 <div class="vwmargin2">
 </div>
 <div class="sidebar-container">
 </div>
+
+<h1 class="text-center">About This Hotel</h1>
+	<p>
+		<%= @detail["HotelDetails"]["locationDescription"] %>
+	</p>
 
 <h1 class="text-center">Hotel Information</h1>
 <table class="table table-hover table-striped table-condensed table-bordered">
@@ -18,7 +35,6 @@
 	  <th>Dining</th>
 	  <th>Services</th>
 	  <th>Rooms</th>
-      <th colspan="9"></th>
     </tr>
   </thead>
 
@@ -27,7 +43,7 @@
         <td><%= @detail["HotelSummary"]["name"]%></td>
         <td><!-- Property Amenities & services -->
 			<% @detail["PropertyAmenities"]["PropertyAmenity"].each do |property| %>
-				<%= property["amenity"] %><br>
+				<li><%= property["amenity"] %></li>
 			<% end %></td>
         <td><%= @detail["HotelDetails"]["businessAmenitiesDescription"] %></td>
         <td><%= @detail["HotelDetails"]["diningDescription"] %></td>
@@ -42,15 +58,18 @@
 <table class="table table-hover table-striped table-condensed table-bordered">
   <thead>
     <tr class="row-margin">
+      <th>Check-In</th>
+      <th>Check-Out</th>
       <th>Property Information</th>
       <th>CheckIn Instructions</th>
       <th>Hotel Policy</th>
-      <th colspan="6"></th>
     </tr>
   </thead>
 
   <tbody>
       <tr>
+      	<td><%= @detail["HotelDetails"]["checkInTime"]%></td>
+      	<td><%= @detail["HotelDetails"]["checkOutTime"]%></td>
         <td><%= @detail["HotelDetails"]["propertyInformation"] %></td>
         <td><%= @detail["HotelDetails"]["checkInInstructions"] %></td>
         <td><%= @detail["HotelDetails"]["hotelPolicy"] %></td>
@@ -58,7 +77,7 @@
   </tbody>
 </table>
 
-<h2 class="text-center">Room Information</h1>
+<h1 class="text-center">Room Information</h1>
 
 <table class="table table-hover table-striped table-condensed table-bordered">
   <thead>
@@ -77,10 +96,19 @@
 	  		<!-- Room amenities -->
 	  		<td>
 		  		<% detail["roomAmenities"]["RoomAmenity"].each do |amenity| %>
-		  			<%= amenity["amenity"] %><br>
+					<li>
+						<%= amenity["amenity"] %>
+					</li>
 		  		<% end %>
+		  			<%= detail["descriptionLong"][8...-6] %>
 	  		</td>
 	  	</tr>
   	<% end %>
   </tbody>
 </table>
+
+<h1 class="text-center">Images</h1>
+	<!-- all the hotel images in b.jpg (also available in z.jpg and t.jpg)-->
+	<% @detail["HotelImages"]["HotelImage"].each do |image| %>
+		<%= image_tag(image["url"][0...-5] + "b.jpg")  %>
+	<% end %>
