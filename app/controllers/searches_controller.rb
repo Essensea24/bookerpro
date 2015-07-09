@@ -3,7 +3,8 @@ class SearchesController < ApplicationController
   def show
     response = ShowRemote.find(params[:hotelId], params[:options])
     @detail = response["HotelInformationResponse"]
-    @images = RoomImage.find(params[:hotelId])
+    image_response = RoomImage.find(params[:hotelId])
+    @images = image_response["HotelRoomImageResponse"]["RoomImages"]["RoomImage"]
 
   end
 
