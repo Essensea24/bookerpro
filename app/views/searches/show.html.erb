@@ -33,7 +33,6 @@
 	  <th>Dining</th>
 	  <th>Services</th>
 	  <th>Rooms</th>
-      <th colspan="9"></th>
     </tr>
   </thead>
 
@@ -62,7 +61,6 @@
       <th>Property Information</th>
       <th>CheckIn Instructions</th>
       <th>Hotel Policy</th>
-      <th colspan="6"></th>
     </tr>
   </thead>
 
@@ -96,9 +94,11 @@
 	  		<!-- Room amenities -->
 	  		<td>
 		  		<% detail["roomAmenities"]["RoomAmenity"].each do |amenity| %>
-		  			<%= amenity["amenity"] %><br>
+					<li>
+						<%= amenity["amenity"] %>
+					</li>
 		  		<% end %>
-		  		<%= detail["descriptionLong"] %>
+		  			<%= detail["descriptionLong"][8...-6] %>
 	  		</td>
 	  	</tr>
   	<% end %>
