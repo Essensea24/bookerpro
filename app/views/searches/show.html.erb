@@ -108,6 +108,64 @@
 </table>
 
 <h1 class="text-center">Images</h1>
+
+	<h2>Featured Image</h2>
+	<!-- display the featured image of the hotel -->
+	<% @detail["HotelImages"]["HotelImage"].each do |image| %>
+		<% if image["type"] == 1 %>
+			<%= image_tag(image["url"][0...-5] + "b.jpg") %>
+		<% end %>	
+	<% end %>
+
+	<h2>Guest Rooms</h2>
+	<!-- display the room images of the hotel -->
+	<% @detail["HotelImages"]["HotelImage"].each do |image| %>
+		<% if image["caption"] == ("Guestroom" || "Guestroom View") %>
+			<%= image_tag(image["url"][0...-5] + "b.jpg") %>
+		<% end %>	
+	<% end %>
+
+	<!-- display the chapel -->
+	<h2>Chapel</h2>
+	<% @detail["HotelImages"]["HotelImage"].each do |image| %>
+		<% if image["caption"] == "Chapel" %>
+			<%= image_tag(image["url"][0...-5] + "b.jpg") %>
+		<% end %>	
+	<% end %>
+
+	<!-- display the meeting rooms -->
+	<h2>Meeting Facility</h2>
+	<% @detail["HotelImages"]["HotelImage"].each do |image| %>
+		<% if image["caption"] == "Meeting Facility" %>
+		
+			<%= image_tag(image["url"][0...-5] + "b.jpg") %>
+		<% end %>	
+	<% end %>
+	<!-- display the bathrooms -->
+	<h2>Bathrooms</h2>
+	<% @detail["HotelImages"]["HotelImage"].each do |image| %>
+		<% if image["caption"] == "Bathroom" %>
+			<%= image_tag(image["url"][0...-5] + "b.jpg") %>
+		<% end %>	
+	<% end %>
+
+	<!-- display restaurants -->
+	<h2>Restaurant</h2>
+	<% @detail["HotelImages"]["HotelImage"].each do |image| %>
+		<% if image["caption"] == ("Restaurant") %>	
+			<%= image_tag(image["url"][0...-5] + "b.jpg") %>
+		<% end %>	
+	<% end %>
+
+	<!-- display the pools -->
+	<h2>Pools</h2>
+	<% @detail["HotelImages"]["HotelImage"].each do |image| %>
+		<% if image["caption"] == ("Pool" || "Indoor Pool") %>	
+			<%= image_tag(image["url"][0...-5] + "b.jpg") %>
+		<% end %>	
+	<% end %>
+
+	<h2>All Images</h2>
 	<!-- all the hotel images in b.jpg (also available in z.jpg and t.jpg)-->
 	<% @detail["HotelImages"]["HotelImage"].each do |image| %>
 		<%= image_tag(image["url"][0...-5] + "b.jpg")  %>
