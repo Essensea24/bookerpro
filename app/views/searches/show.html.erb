@@ -1,29 +1,23 @@
-<%#= @detail %>
-<%#= @detail["HotelSummary"] %>
-	<!-- "name", "address1", "city", "stateProvinceCode", "postalCode", "countryCode", "hotelRating", "hotelRatingDisplay", "tripAdvisorRating", "tripAdvisorReviewCount", "tripAdvisorRatingUrl", "locationDescription", "highRate", "lowRate", "latitude", "longitude" -->
-<%#= @detail["HotelDetails"] %>
-	<!-- "numberOfRooms", "numberOfFloors", "checkInTime", "checkOutTime", "propertyInformation", "areaInformation", "hotelPolicy", "roomInformation", "drivingDirections", "checkInInstructions", "knowBeforeYouGoDescription", 
-	"mandatoryFeesDescription", "locationDescription", "roomFeesDescription", "diningDescription", "amenitiesDescription", "businessAmenitiesDescription", "roomDetailDescription"  -->
-
-
-<h1 class="text-center">Hotel Information</h1>
-<%#= @detail["Suppliers"] %>
-
-<!-- Used in a loop -->
-	<%#= @detail["RoomTypes"]["RoomType"] %>
-	<%#= @detail["PropertyAmenities"]["PropertyAmenity"] %>
-	<%#= @detail["HotelImages"]["HotelImage"] %>
-<div class="hotelshow-container">
+<div class="top-image-container">
+<%= image_tag (@detail["HotelImages"]["HotelImage"][5]["url"][0...-5] + "z.jpg"), :class => "top-image" %>
 </div>
-<div class="vwmargin2">
+<div class="hotelshow-container">
+	<div class ="title-container">
+		<h2><%= @detail["HotelSummary"]["name"]%></h2>
+		<h5><%= @detail["HotelSummary"]["address1"]%>,
+		<%= @detail["HotelSummary"]["city"]%>,
+		<%= @detail["HotelSummary"]["state"]%>
+		</h5>
+	</div>
 </div>
 <div class="sidebar-container">
+abc
 </div>
 
 <h1 class="text-center">About This Hotel</h1>
-	<p>
-		<%= @detail["HotelDetails"]["locationDescription"] %>
-	</p>
+    <p>
+        <%= @detail["HotelDetails"]["locationDescription"] %>
+    </p>
 
 <h1 class="text-center">Hotel Information</h1>
 <table class="table table-hover table-striped table-condensed table-bordered">
@@ -31,20 +25,20 @@
     <tr class="row-margin">
       <th>Hotel Name</th>
       <th>Property Amenities</th>
-	  <th>Business Amenities</th>
-	  <th>Dining</th>
-	  <th>Services</th>
-	  <th>Rooms</th>
+      <th>Business Amenities</th>
+      <th>Dining</th>
+      <th>Services</th>
+      <th>Rooms</th>
     </tr>
   </thead>
 
   <tbody>
       <tr>
-        <td><%= @detail["HotelSummary"]["name"]%></td>
+        <td></td>
         <td><!-- Property Amenities & services -->
-			<% @detail["PropertyAmenities"]["PropertyAmenity"].each do |property| %>
-				<li><%= property["amenity"] %></li>
-			<% end %></td>
+            <% @detail["PropertyAmenities"]["PropertyAmenity"].each do |property| %>
+                <li><%= property["amenity"] %></li>
+            <% end %></td>
         <td><%= @detail["HotelDetails"]["businessAmenitiesDescription"] %></td>
         <td><%= @detail["HotelDetails"]["diningDescription"] %></td>
         <td><%= @detail["HotelDetails"]["amenitiesDescription"] %></td>
@@ -68,8 +62,8 @@
 
   <tbody>
       <tr>
-      	<td><%= @detail["HotelDetails"]["checkInTime"]%></td>
-      	<td><%= @detail["HotelDetails"]["checkOutTime"]%></td>
+          <td><%= @detail["HotelDetails"]["checkInTime"]%></td>
+          <td><%= @detail["HotelDetails"]["checkOutTime"]%></td>
         <td><%= @detail["HotelDetails"]["propertyInformation"] %></td>
         <td><%= @detail["HotelDetails"]["checkInInstructions"] %></td>
         <td><%= @detail["HotelDetails"]["hotelPolicy"] %></td>
@@ -81,34 +75,34 @@
 
 <table class="table table-hover table-striped table-condensed table-bordered">
   <thead>
-  	<tr class="row-margin">
-  	  <th>Room Type</th>
+      <tr class="row-margin">
+        <th>Room Type</th>
       <th>Room Amenities</th>
-  	</tr>
+      </tr>
   </thead>
   <tbody>
-	<!-- Room types -->
-	<% @detail["RoomTypes"]["RoomType"].each do |detail| %>  
-	  	<tr>
-	  		<td>
-	  			<%= detail["description"] %>
-	  		</td>
-	  		<!-- Room amenities -->
-	  		<td>
-		  		<% detail["roomAmenities"]["RoomAmenity"].each do |amenity| %>
-					<li>
-						<%= amenity["amenity"] %>
-					</li>
-		  		<% end %>
-		  			<%= detail["descriptionLong"][8...-6] %>
-	  		</td>
-	  	</tr>
-  	<% end %>
+    <!-- Room types -->
+    <% @detail["RoomTypes"]["RoomType"].each do |detail| %>  
+          <tr>
+              <td>
+                  <%= detail["description"] %>
+              </td>
+              <!-- Room amenities -->
+              <td>
+                  <% detail["roomAmenities"]["RoomAmenity"].each do |amenity| %>
+                    <li>
+                        <%= amenity["amenity"] %>
+                    </li>
+                  <% end %>
+                      <%= detail["descriptionLong"][8...-6] %>
+              </td>
+          </tr>
+      <% end %>
   </tbody>
 </table>
 
 <h1 class="text-center">Images</h1>
-	<!-- all the hotel images in b.jpg (also available in z.jpg and t.jpg)-->
-	<% @detail["HotelImages"]["HotelImage"].each do |image| %>
-		<%= image_tag(image["url"][0...-5] + "b.jpg")  %>
-	<% end %>
+    <!-- all the hotel images in b.jpg (also available in z.jpg and t.jpg)-->
+    <% @detail["HotelImages"]["HotelImage"].each do |image| %>
+        <%= image_tag(image["url"][0...-5] + "b.jpg")  %>
+    <% end %>

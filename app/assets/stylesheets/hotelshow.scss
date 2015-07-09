@@ -1,18 +1,9 @@
-
-.vwmargin2 {
-	width: 5vw;
-	height: 100vh;
-	margin: 0;
-	background-color: red;
-	display: inline-block;
-	padding: 0;
-}
-
 .hotelshow-container {
 	width: 67vw;
 	height: 100vh;
 	margin-left: 2vw;
-	background-color: blue;
+	margin-right: 5vw;
+	border: black 2px solid;
 	display: inline-block;
 	padding: 0;
 }
@@ -24,4 +15,24 @@
 	background-color: green;
 	display: inline-block;
 	padding: 0;
+}
+
+.top-image-container {
+	margin-top: 1vh;
+	position: relative;
+	width: 100vw;
+	height: 60vh;
+	overflow: hidden;
+}
+
+.top-image {
+	margin-top: -40vh;
+	width: 100vw;
+}
+
+.title-container {
+	border: black 2px solid;
+	margin: 0 auto;
+	width: 30vw;
+	height: 15vh;
 }
