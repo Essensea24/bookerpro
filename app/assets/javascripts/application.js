@@ -42,7 +42,8 @@ function initialize_my_map() {
         for (i = 0; i < results.length; i++) {
 			var markerPosition = new google.maps.LatLng(results[i]['latitude'], results[i]['longitude'])
             var marker = new google.maps.Marker({
-            	position: markerPosition
+            	position: markerPosition,
+            	label: "results[i]['lowRate']"
                 })
 	        marker.setMap(map)
 	        bounds.extend(markerPosition);
