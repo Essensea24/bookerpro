@@ -1,11 +1,16 @@
-<%#= @detail %><br>
-<%#= @detail["HotelSummary"] %><br><hr>
-<%#= @detail["HotelDetails"] %><br><hr>
-<%#= @detail["Suppliers"] %><br><hr>
-<%#= @detail["RoomTypes"]["RoomType"] %><br><hr>
-<%#= @detail["PropertyAmenities"] %><br><hr>
-<%#= @detail["HotelImages"] %><br><hr>
+<%#= @detail %>
+<%#= @detail["HotelSummary"] %>
+	<!-- "name", "address1", "city", "stateProvinceCode", "postalCode", "countryCode", "hotelRating", "hotelRatingDisplay", "tripAdvisorRating", "tripAdvisorReviewCount", "tripAdvisorRatingUrl", "locationDescription", "highRate", "lowRate", "latitude", "longitude" -->
+<%#= @detail["HotelDetails"] %>
+	<!-- "numberOfRooms", "numberOfFloors", "checkInTime", "checkOutTime", "propertyInformation", "areaInformation", "hotelPolicy", "roomInformation", "drivingDirections", "checkInInstructions", "knowBeforeYouGoDescription", 
+	"mandatoryFeesDescription", "locationDescription", "roomFeesDescription", "diningDescription", "amenitiesDescription", "businessAmenitiesDescription", "roomDetailDescription"  -->
 
+<%#= @detail["Suppliers"] %>
+
+<!-- Used in a loop -->
+	<%#= @detail["RoomTypes"]["RoomType"] %>
+	<%#= @detail["PropertyAmenities"]["PropertyAmenity"] %>
+	<%#= @detail["HotelImages"]["HotelImage"] %>
 <div class="hotelshow-container">
 </div>
 <div class="vwmargin2">
