@@ -58,6 +58,18 @@
 	font-size: 12px;
 }
 
+.room-selection-container {
+	width: 100%;
+	height: auto;
+}
+
+.room-selection-container .individual-room-container {
+	width: 44%;
+	height: 20vh;
+	border: 2px black solid;
+	margin: 4vh 2.5% ;
+	display: inline-block;
+}
 
 
 

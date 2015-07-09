@@ -39,6 +39,24 @@
 	</div>
 	<hr>
 	<div class="room-selection-container">
+	<% @detail["RoomTypes"]["RoomType"].each do |detail| %>  
+        <div class="individual-room-container">
+		</div>
+                  <%= detail["description"] %>
+              </td>
+              <!-- Room amenities -->
+              <td>
+                  <% detail["roomAmenities"]["RoomAmenity"].each do |amenity| %>
+                    <li>
+                        <%= amenity["amenity"] %>
+                    </li>
+                  <% end %>
+                      <%= detail["descriptionLong"][8...-6] %>
+              </td>
+          </tr>
+      <% end %>
+
+
 		<div class="individual-room-container">
 		</div>
 	</div>
