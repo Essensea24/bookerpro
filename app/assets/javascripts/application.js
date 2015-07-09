@@ -34,69 +34,93 @@ function initialize_my_map() {
 	  	};
 
 	  	var bounds = new google.maps.LatLngBounds()
-		
 
 		var infowindow = new google.maps.InfoWindow();
 	 	CustomMarker.prototype.draw = function() {
 	
-	var self = this;
-	
-	var div = this.div;
-	
-	if (!div) {
-	
-		div = this.div = document.createElement('div');
-		
-		div.className = 'marker';
-		
-		div.style.position = 'absolute';
-		div.style.cursor = 'pointer';
-		div.style.width = '20px';
-		div.style.height = '20px';
-		div.style.background = 'blue';
-		
-		if (typeof(self.args.marker_id) !== 'undefined') {
-			div.dataset.marker_id = self.args.marker_id;
-		}
-		
-		google.maps.event.addDomListener(div, "click", function(event) {			
-			google.maps.event.trigger(self, "click");
-		});
-		
-		var panes = this.getPanes();
-		panes.overlayImage.appendChild(div);
-	}
-	
-	var point = this.getProjection().fromLatLngToDivPixel(this.latlng);
-	
-	if (point) {
-		div.style.left = point.x + 'px';
-		div.style.top = point.y + 'px';
-	}
-};
+			var self = this;
+			
+			var div = this.div;
+			
+			
+			if (!div) {
+			
+				div = this.div = document.createElement('div');
+				div2 = this.div2 = document.createElement('div');
+				
+				div.className = 'marker';
+				div2.className = 'marker2';
+				
+				div.style.position = 'absolute';
+				div.style.cursor = 'pointer';
+				div.style.width = '30px';
+				div.style.height = '20px';
+				div.style.background = '#e60';
+				div.innerHTML = innertext
+
+				
+				div2.style.position = 'absolute';
+				div2.style.cursor = 'pointer';
+				div2.style.background = '#e60';
+				div2.style.width = '0px';
+				div2.style.height= '0px';
+				div2.style.borderStyle= 'solid';
+				div2.style.borderWidth= '3px 2.5px 0 2.5px';
+				div2.style.borderColor= '#00e35f transparent transparent transparent';
+				
+				
+				if (typeof(self.args.marker_id) !== 'undefined') {
+					div.dataset.marker_id = self.args.marker_id;
+					div2.dataset.marker_id = self.args.marker_id;
+				}
+				
+				google.maps.event.addDomListener(div, "click", function(event) {			
+					google.maps.event.trigger(self, "click");
+				});
+				
+				var panes = this.getPanes();
+				panes.overlayImage.appendChild(div);
+				panes.overlayImage.appendChild(div2);
+
+			}
+			
+			var point = this.getProjection().fromLatLngToDivPixel(this.latlng);
+			
+			if (point) {
+				div.style.left = (point.x - 15) + 'px';
+				div.style.top = (point.y - 35) + 'px';
+			}
+
+			if (point) {
+				div2.style.left = (point.x - 15) + 'px';
+				div2.style.top = (point.y - 35) + 'px';
+			}
+		};
 		var markers = []
 
         for (i = 0; i < results.length; i++) {
+        	
+        	innertext = results[i]['lowRate']
 			var markerPosition = new google.maps.LatLng(results[i]['latitude'], results[i]['longitude'])
-            var marker = new google.maps.Marker({
-            	position: markerPosition
-                })
-	        marker.setMap(map)
+			console.log("Price: " + results[i]['lowRate'])
+
 	        	var overlay = new CustomMarker(
 					markerPosition, 
 					map,
-					{}
+					innertext
 					);
+	        overlay.setMap(map)
 	        bounds.extend(markerPosition);
 			map.fitBounds(bounds);
-	       	markers.push(marker)
+
+	       	markers.push(overlay)
 	       	google.maps.event.addListener(markers[i], 'click', function() {
 	            infowindow.setContent(this.html);
 	            infowindow.open(map, this);
-	            console.log(this)
+	            
 	        });
         }
-	    (marker, i);
+	    (overlay, i);
 	})
 
 }

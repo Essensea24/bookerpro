@@ -15,8 +15,10 @@ CustomMarker.prototype.draw = function() {
 	if (!div) {
 	
 		div = this.div = document.createElement('div');
+		div2 = this.div2 = document.createElement('div2');
 		
 		div.className = 'marker';
+		div2.className = 'marker';
 		
 		div.style.position = 'absolute';
 		div.style.cursor = 'pointer';
