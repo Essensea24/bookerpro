@@ -1,12 +1,10 @@
-
-<%#= @detail["HotelImages"]["HotelImage"]["thumbNailUrl"] %>
-<%#= @detail %>
-
-<!-- all the hotel images in b.jpg (also available in z.jpg and t.jpg)-->
-<% @detail["HotelImages"]["HotelImage"].each do |image| %>
-	<%= image_tag(image["url"][0...-5] + "b.jpg")  %>
-<% end %>
-<br>
+<%#= @detail %><br>
+<%#= @detail["HotelSummary"] %><br><hr>
+<%#= @detail["HotelDetails"] %><br><hr>
+<%#= @detail["Suppliers"] %><br><hr>
+<%#= @detail["RoomTypes"]["RoomType"] %><br><hr>
+<%#= @detail["PropertyAmenities"] %><br><hr>
+<%#= @detail["HotelImages"] %><br><hr>
 
 <div class="hotelshow-container">
 </div>
@@ -91,3 +89,9 @@
   	<% end %>
   </tbody>
 </table>
+
+<h2 class="text-center">Images</h1>
+	<!-- all the hotel images in b.jpg (also available in z.jpg and t.jpg)-->
+	<% @detail["HotelImages"]["HotelImage"].each do |image| %>
+		<%= image_tag(image["url"][0...-5] + "b.jpg")  %>
+	<% end %>
