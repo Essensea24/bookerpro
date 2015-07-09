@@ -77,7 +77,7 @@
   </tbody>
 </table>
 
-<h2 class="text-center">Room Information</h1>
+<h1 class="text-center">Room Information</h1>
 
 <table class="table table-hover table-striped table-condensed table-bordered">
   <thead>
@@ -98,13 +98,14 @@
 		  		<% detail["roomAmenities"]["RoomAmenity"].each do |amenity| %>
 		  			<%= amenity["amenity"] %><br>
 		  		<% end %>
+		  		<%= detail["descriptionLong"] %>
 	  		</td>
 	  	</tr>
   	<% end %>
   </tbody>
 </table>
 
-<h2 class="text-center">Images</h1>
+<h1 class="text-center">Images</h1>
 	<!-- all the hotel images in b.jpg (also available in z.jpg and t.jpg)-->
 	<% @detail["HotelImages"]["HotelImage"].each do |image| %>
 		<%= image_tag(image["url"][0...-5] + "b.jpg")  %>
