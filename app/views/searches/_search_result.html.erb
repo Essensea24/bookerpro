@@ -3,18 +3,22 @@
 	    <%= render 'filter' %>
 	</div>
 <% @hotels.each do |hotel| %>
-    <div class="all-hotels clearfix">
-    	<div class="grow">
-	        <%= link_to show_hotel_path(:hotelId => hotel["hotelId"], :class => "link-underline clearfix") do %>
-	            <img src="http://media.expedia.com<%= hotel["thumbNailUrl"][0...-5] + "b.jpg" %>" />
-	            <div class="price-box"><div id="booker-logo" class="hotel-rate price-info">$<%= hotel["lowRate"].round(0) %></div></div>
+	
+	    <div class="all-hotels">
+	    	<div class="grow">
+		        <%= link_to show_hotel_path(:hotelId => hotel["hotelId"], :class => "link-underline") do %>
+		        
+		            <img src="http://media.expedia.com<%= hotel["thumbNailUrl"][0...-5] + "b.jpg" %>" />
+		            <div class="price-box"><div id="booker-logo" class="hotel-rate price-info">$<%= hotel["lowRate"].round(0) %></div></div>
+		   
+	            <div class="hotel-name" id="booker-logo"><%= hotel["name"] %></div>
+	            <span class="hotel-rating" id="booker-logo"><%= hotel["hotelRating"] %> star hotel |</span>
+	            <span><%= link_to " Book Now",show_hotel_path(:hotelId => hotel["hotelId"]), :id => "booker-logo", :class => "book-now" %></span>
+	            </div>
+	        <% end %>
 	    </div>
-            <div class="hotel-name" id="booker-logo"><%= hotel["name"] %></div>
-            <span class="hotel-rating" id="booker-logo"><%= hotel["hotelRating"] %> star hotel | </span>
-            <span class="book-now" id="booker-logo"><%= link_to "Book Now",show_hotel_path(:hotelId => hotel["hotelId"]) %></span>
-        <% end %>
-    </div>
-<% end %>
+	<% end %>
+	
 </div>
 
 <div class="map-wrapper">
