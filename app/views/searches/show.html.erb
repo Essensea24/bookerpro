@@ -1,5 +1,12 @@
+
+<%#= @detail["HotelImages"]["HotelImage"]["thumbNailUrl"] %>
 <%#= @detail %>
-<%#= @detail["HotelInformationResponse"]["HotelDetails"] %>
+
+<!-- all the hotel images in z.jpg (also in b.jpg and t.jpg)-->
+<% @detail["HotelImages"]["HotelImage"].each do |image| %>
+	<%= image_tag(image["url"][0...-5] + "z.jpg")  %>
+<% end %>
+<br>
 
 <div class="hotelshow-container">
 </div>
