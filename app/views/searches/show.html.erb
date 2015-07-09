@@ -42,7 +42,7 @@
         <td><%= @detail["HotelSummary"]["name"]%></td>
         <td><!-- Property Amenities & services -->
 			<% @detail["PropertyAmenities"]["PropertyAmenity"].each do |property| %>
-				<%= property["amenity"] %><br>
+				<li><%= property["amenity"] %></li>
 			<% end %></td>
         <td><%= @detail["HotelDetails"]["businessAmenitiesDescription"] %></td>
         <td><%= @detail["HotelDetails"]["diningDescription"] %></td>
