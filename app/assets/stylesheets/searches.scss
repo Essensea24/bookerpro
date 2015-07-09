@@ -2,72 +2,127 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-a {
-	color: black;
-	text-decoration: none !important;
+/* If the screen is less than 1200px, run this CSS below */
+@media screen and (max-width: 1199px) {
+	a {
+		color: black;
+		text-decoration: none !important;
+	}
+	img {
+		vertical-align: middle;
+		border: 0;
+	}
+	#search-padding {
+		padding-top: 3vh;
+		padding-left: 1vw;
+	}
+	#google-map {
+		height: 100vh;
+		width: 40vw;
+		position: relative;
+		bottom: 3vh;
+	}
+	.map-wrapper {
+		position: fixed;
+		right: 0;
+	}
+	#image-overflow img {
+		width: 400px;
+		height: 300px;
+		box-shadow: 10px 10px 5px #888888;
+	}
+	.hotel-container {
+		text-align: center;
+		height: 400px;
+		width: 550px;
+	}
+	.grow {
+		transition: all .2s ease-in-out;
+	}
+	.grow:hover { 
+		transform: scale(1.1);
+	}
+	.price-info {
+		font-size: 20px;
+		color: white;
+	}
+	.price-box {
+		background-color: rgba(0,0,0,0.8);
+		width: 60px;
+		position: relative;
+		bottom: 40px;
+		left: 75px;
+	}
+	.title-name {
+		color: black;
+		font-size: 20px;
+		text-decoration: none;
+	}
+	.big-view {
+		display: none;
+	}
+
 }
-img {
-	vertical-align: middle;
-	border: 0;
-}
-#search-padding {
-	padding-top: 3vh;
-	padding-left: 1vw;
-}
-#google-map {
-	height: 100vh;
-	position: relative;
-	width: 40vw;
-	position: relative;
-	bottom: 3vh;
-}
-.relative-column {
-	position: relative;
-	width: 100vw;
-	height: 100vh;
-}
-.map-wrapper {
-	position: fixed;
-	right: 0;
-}
-.hotel-image {
-	position: relative;
-	border: 0;
-}
-#image-overflow img {
-	width: 300px;
-	height: 220px;
-	box-shadow: 10px 10px 5px #888888;
-}
-/* .grow increases results images by .1 on hover */
-.grow {
-	transition: all .2s ease-in-out;
-}
-.grow:hover { 
-	transform: scale(1.1);
-}
-.hotel-container {
-	text-align: center;
-	height: 330px;
-	width: 350px;
-}
-.hotel-container:hover {
-	/*background-color: rgba(0,0,0,0.1);*/
-}
-.price-info {
-	font-size: 20px;
-	color: white;
-}
-.price-box {
-	background-color: rgba(0,0,0,0.8);
-	width: 60px;
-	position: relative;
-	bottom: 40px;
-	left: 25px;
-}
-.title-name {
-	color: black;
-	font-size: 20px;
-	text-decoration: none;
+
+/* if the screen is greater than 1200px, run this CSS below */
+@media screen and (min-width: 1200px) {
+	a {
+		color: black;
+		text-decoration: none !important;
+	}
+	img {
+		vertical-align: middle;
+		border: 0;
+	}
+	#search-padding {
+		padding-top: 3vh;
+		padding-left: 1vw;
+	}
+	#google-map {
+		height: 100vh;
+		width: 40vw;
+		position: relative;
+		bottom: 3vh;
+	}
+	.map-wrapper {
+		position: fixed;
+		right: 0;
+	}
+	#image-overflow img {
+		width: 300px;
+		height: 220px;
+		box-shadow: 10px 10px 5px #888888;
+	}
+	/* .grow increases results images by .1 on hover */
+	.grow {
+		transition: all .2s ease-in-out;
+	}
+	.grow:hover { 
+		transform: scale(1.1);
+	}
+	.hotel-container {
+		text-align: center;
+		height: 330px;
+		width: 350px;
+	}
+	.price-info {
+		font-size: 20px;
+		color: white;
+	}
+	.price-box {
+		background-color: rgba(0,0,0,0.8);
+		width: 60px;
+		position: relative;
+		bottom: 40px;
+		left: 25px;
+	}
+	.title-name {
+		color: black;
+		font-size: 20px;
+		text-decoration: none;
+	}
+	.small-view {
+		display: none;
+	}
 }
 

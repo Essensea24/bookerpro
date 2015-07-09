@@ -1,17 +1,10 @@
-<div class="col-md-7 filter-container">
-	<%= render 'filter' %>
-</div>
+<!-- partial within a partial for big screens -->
 
-<div id="search-padding" class="row">
-		<div class="col-md-7 relative-column">
-			<%= render "searches/search_result" %>
-		</div>
+<%= render "searches/big_view" %>
 
-		<div class="map-wrapper">
-			<div id="google-map" class="col-md-5"></div>
-		</div>
-</div>
+<!-- partial within a partial for a smaller screen -->
 
+<%= render "searches/small_view" %>
 
 <%#= @hotels %>
 <%#= @hotels.inspect %>
