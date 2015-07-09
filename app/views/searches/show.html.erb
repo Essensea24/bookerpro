@@ -10,15 +10,76 @@
 		 <%= @detail["HotelSummary"]["countryCode"]%>
 		</h5>
 	</div>
+
+	<div class="about-container">
+		<h4>About This Hotel</h4>
+		<%= @detail["HotelDetails"]["locationDescription"] %>
+	</div>
+
+	<div class="choose-room-container">
+		<h4>Choose Your Room</h4>
+		<div class="check-in-container col-md-2">
+		Check in<br>
+		</div>
+		<div class="check-out-container col-md-2">
+		Check out<br>
+		</div>
+		<div class="rooms-selector-container col-md-1">
+		Rooms<br>
+		</div>
+		<div class="adults-selector-container col-md-1">
+		Adults<br>
+		</div>
+		<div class="children-selector-container col-md-1">
+		Children<br>
+		</div>
+		<div class="update-button-container col-md-2">
+		Update
+		</div>
+	</div>
+	<hr>
+	<div class="room-selection-container">
+		<div class="individual-room-container">
+		</div>
+	</div>
+
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="sidebar-container">
 abc
 </div>
 
-<h1 class="text-center">About This Hotel</h1>
-    <p>
-        <%= @detail["HotelDetails"]["locationDescription"] %>
-    </p>
 
 <h1 class="text-center">Hotel Information</h1>
 <table class="table table-hover table-striped table-condensed table-bordered">
