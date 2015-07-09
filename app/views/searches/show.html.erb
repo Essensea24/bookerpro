@@ -4,15 +4,13 @@
 <%#= @detail["HotelDetails"] %>
 	<!-- "numberOfRooms", "numberOfFloors", "checkInTime", "checkOutTime", "propertyInformation", "areaInformation", "hotelPolicy", "roomInformation", "drivingDirections", "checkInInstructions", "knowBeforeYouGoDescription", 
 	"mandatoryFeesDescription", "locationDescription", "roomFeesDescription", "diningDescription", "amenitiesDescription", "businessAmenitiesDescription", "roomDetailDescription"  -->
-
-
-<h1 class="text-center">Hotel Information</h1>
 <%#= @detail["Suppliers"] %>
-
 <!-- Used in a loop -->
 	<%#= @detail["RoomTypes"]["RoomType"] %>
 	<%#= @detail["PropertyAmenities"]["PropertyAmenity"] %>
 	<%#= @detail["HotelImages"]["HotelImage"] %>
+
+<h1 class="text-center">Hotel Information</h1>
 <div class="hotelshow-container">
 </div>
 <div class="vwmargin2">
@@ -109,16 +107,16 @@
 
 <h1 class="text-center">Images</h1>
 
-	<h2>Featured Image</h2>
 	<!-- display the featured image of the hotel -->
+	<h2>Featured Image</h2>
 	<% @detail["HotelImages"]["HotelImage"].each do |image| %>
 		<% if image["type"] == 1 %>
 			<%= image_tag(image["url"][0...-5] + "b.jpg") %>
 		<% end %>	
 	<% end %>
 
-	<h2>Guest Rooms</h2>
 	<!-- display the room images of the hotel -->
+	<h2>Guest Rooms</h2>
 	<% @detail["HotelImages"]["HotelImage"].each do |image| %>
 		<% if image["caption"] == ("Guestroom" || "Guestroom View") %>
 			<%= image_tag(image["url"][0...-5] + "b.jpg") %>
@@ -141,6 +139,7 @@
 			<%= image_tag(image["url"][0...-5] + "b.jpg") %>
 		<% end %>	
 	<% end %>
+
 	<!-- display the bathrooms -->
 	<h2>Bathrooms</h2>
 	<% @detail["HotelImages"]["HotelImage"].each do |image| %>
@@ -165,8 +164,8 @@
 		<% end %>	
 	<% end %>
 
-	<h2>All Images</h2>
 	<!-- all the hotel images in b.jpg (also available in z.jpg and t.jpg)-->
+	<h2>All Images</h2>
 	<% @detail["HotelImages"]["HotelImage"].each do |image| %>
 		<%= image_tag(image["url"][0...-5] + "b.jpg")  %>
 	<% end %>
