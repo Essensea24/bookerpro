@@ -1,17 +1,3 @@
-<%#= @detail %>
-<br><%= @detail["HotelSummary"] %>
-	<!-- "name", "address1", "city", "stateProvinceCode", "postalCode", "countryCode", "hotelRating", "hotelRatingDisplay", "tripAdvisorRating", "tripAdvisorReviewCount", "tripAdvisorRatingUrl", "locationDescription", "highRate", "lowRate", "latitude", "longitude" -->
-<%#= @detail["HotelDetails"] %>
-	<!-- "numberOfRooms", "numberOfFloors", "checkInTime", "checkOutTime", "propertyInformation", "areaInformation", "hotelPolicy", "roomInformation", "drivingDirections", "checkInInstructions", "knowBeforeYouGoDescription", 
-	"mandatoryFeesDescription", "locationDescription", "roomFeesDescription", "diningDescription", "amenitiesDescription", "businessAmenitiesDescription", "roomDetailDescription"  -->
-<%#= @detail["Suppliers"] %>
-<!-- Used in a loop -->
-	<%#= @detail["RoomTypes"]["RoomType"] %>
-	<%#= @detail["PropertyAmenities"]["PropertyAmenity"] %>
-	<%#= @detail["HotelImages"]["HotelImage"] %>
-
-<h1 class="text-center">Hotel Information</h1>
-<div class="hotelshow-container">
 <div class="top-image-container">
 <%= image_tag (@detail["HotelImages"]["HotelImage"][5]["url"][0...-5] + "z.jpg"), :class => "top-image" %>
 </div>
@@ -242,23 +228,3 @@
 	<% @detail["HotelImages"]["HotelImage"].each do |image| %>
 		<%= image_tag(image["url"][0...-5] + "b.jpg")  %>
 	<% end %>
-
-	<h2>Room Rates</h2>
-		$<%= @detail["HotelSummary"]["lowRate"].round(0) %><br>
-		$<%= @detail["HotelSummary"]["highRate"].round(0) %>
-
-	<h2>Address</h2>
-		<%= @detail["HotelSummary"]["address1"] %>
-		<%= @detail["HotelSummary"]["city"] %>
-		<%= @detail["HotelSummary"]["postalCode"] %>
-		<%= @detail["HotelSummary"]["countryCode"] %><br>
-		<%= @detail["HotelSummary"]["locationDescription"] %>
-
-	<h2>Rating</h2>
-		<h4>Hotel Rating</h4>
-		<%= @detail["HotelSummary"]["hotelRating"] %> Star
-		<h4>Trip Advisor Rating</h4>
-		<%= @detail["HotelSummary"]["tripAdvisorRating"] %>, 
-		<%= @detail["HotelSummary"]["tripAdvisorReviewCount"] %> reviews
-		<%= image_tag(@detail["HotelSummary"]["tripAdvisorRatingUrl"], size: "16x10")%>
-
