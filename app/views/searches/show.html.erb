@@ -41,20 +41,26 @@
 
 	<div class="room-selection-container">
 
-    		<% @detail["RoomTypes"]["RoomType"].each do |room| %> 
-    			<div class="individual-room-container">
- 					<% @images.each do |image| %>
- 					<%= image_tag
- 						<% if image["roomTypeCode"].to_s == room["@roomCode"].to_s %>
-							<%= image_tag (image["url"][0...-5] + "b.jpg"), :class => "room-image" %>
+
+	<% @room_responses["HotelRoomAvailabilityResponse"]["HotelRoomResponse"].each do |room_response|%>
+	
+			<% @detail["RoomTypes"]["RoomType"].each do |room_detail| %> 
+ 						<% if room_response["roomTypeCode"].to_s == room_detail["@roomCode"].to_s && room_response["RoomImages"]["RoomImage"].first[1] %>
+							<%#= room['descriptionLong']%>
+							<div class="individual-room-container">
+								<%= image_tag (room_response["RoomImages"]["RoomImage"].first[1].to_s[0...-5] + "b.jpg"), :class => "room-image" %>
+								<%= room_detail["description"] %><br>
+							</div>
+						<% elsif room_response["roomTypeCode"].to_s == room_detail["@roomCode"].to_s && room_response["RoomImages"]["RoomImage"].first[1] == nil %>
+							<div class="individual-room-container">
+								"hi. stock photo here."	
+								<%= room_detail["description"] %><br>
+							</div>
 						<% end %>
-					<% end %>
-
-					<%= room["description"] %><br>
-					<%= (room['descriptionLong']) %>
-				</div>	
-      		<% end %>
-
+					
+				<% end %>
+			
+	<% end %>
 		</div>
 	</div>
 

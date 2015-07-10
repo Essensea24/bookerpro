@@ -4,15 +4,17 @@ class RoomAvail < ActiveRecord::Base
 	base_uri "http://api.ean.com/ean-services/rs/hotel/v3/avail?"
 
 		def self.find(hotelId)
+
 			query = 
 			    { 
 			    "cid"=> "55505",
 			    "minorRev"=> "99",
 			    "apiKey"=> "cbrzfta369qwyrm9t5b8y8kf",
-			    "apiExperience" => "PARTNER_AFFILIATE",
+			    "locale" => "en_US", 
+			    "curencyCode" => "USD",
 			    "hotelId" => hotelId,
-			    "arrivalDate" => "07/30/15",
-			    "departureDate" => "08/5/15",
+			    "arrivalDate" => "10/25/15",
+			    "departureDate" => "10/26/15",
 			    "includeRoomImages" => true,
 			    "RoomGroup" => 
 			      				{ 
@@ -20,7 +22,7 @@ class RoomAvail < ActiveRecord::Base
 			                        {
 			                        "numberOfAdults" => 2
 			                        }
-			                	},
+			                	}
 			    }
 
 
