@@ -36,6 +36,8 @@ function initialize_my_map() {
 	  	var bounds = new google.maps.LatLngBounds()
 
 		var infowindow = new google.maps.InfoWindow();
+
+
 	 	CustomMarker.prototype.draw = function() {
 	
 			var self = this;
@@ -71,7 +73,7 @@ function initialize_my_map() {
 				
 				if (typeof(self.args.marker_id) !== 'undefined') {
 					div.dataset.marker_id = self.args.marker_id;
-					div2.dataset.marker_id = self.args.marker_id;
+
 				}
 				
 				google.maps.event.addDomListener(div, "click", function(event) {			
@@ -80,7 +82,7 @@ function initialize_my_map() {
 				
 				var panes = this.getPanes();
 				panes.overlayImage.appendChild(div);
-				panes.overlayImage.appendChild(div2);
+
 
 			}
 			
@@ -91,16 +93,13 @@ function initialize_my_map() {
 				div.style.top = (point.y - 35) + 'px';
 			}
 
-			if (point) {
-				div2.style.left = (point.x - 15) + 'px';
-				div2.style.top = (point.y - 35) + 'px';
-			}
+
 		};
 		var markers = []
 
         for (i = 0; i < results.length; i++) {
-        	
-        	innertext = results[i]['lowRate']
+        	 
+        	var innertext = results[i]['lowRate']
 			var markerPosition = new google.maps.LatLng(results[i]['latitude'], results[i]['longitude'])
 			console.log("Price: " + results[i]['lowRate'])
 
@@ -112,8 +111,7 @@ function initialize_my_map() {
 	        overlay.setMap(map)
 	        bounds.extend(markerPosition);
 			map.fitBounds(bounds);
-
-	       	markers.push(overlay)
+	       	markers.push(overlay);
 	       	google.maps.event.addListener(markers[i], 'click', function() {
 	            infowindow.setContent(this.html);
 	            infowindow.open(map, this);
