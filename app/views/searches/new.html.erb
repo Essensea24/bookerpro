@@ -1,37 +1,38 @@
-<!--  for big screens -->
+<!-- <div class="search-render"> -->
+    <%#= render "searches/search_result" %>
+<!-- </div> -->
+		<!--  for big screens -->
 
-<div class="big-view">
-    	<div class="col-md-7 filter-container">
-			<%= render 'filter' %>
-		</div>
-
-        <div id="search-padding" class="row">
-			<div class="col-md-7 relative-column">
+		<div class="big-view">
+			<div>
 				<%= render "searches/search_result" %>
 			</div>
-			<div class="map-wrapper">
-				<div id="google-map" class="col-md-5"></div>
-			</div>
-			
-		</div>
-    </div>
+	    </div>
+		<!--  for a smaller screen -->
 
-<!--  for a smaller screen -->
 
-<div class="small-view">
-    	<div class="col-md-7 filter-container">
-			<%= render 'filter' %>
-		</div>
+		<!-- <div class="small-view">
+			<div> -->
+				<%#= render "searches/search_min" %>
+			<!-- </div>
+	    </div> -->
+		<!-- <div class="small-view">
+		    	<div class="col-md-7 filter-container"> -->
+					<%#= render 'filter' %>
+				<!-- </div>
 
-        <div id="search-padding" class="row">
-			<div class="col-md-7 relative-column">
-				<%= render "searches/search_min" %>
+		        <div id="search-padding" class="row">
+					<div class="col-md-7 relative-column"> -->
+						<%#= render "searches/search_min" %>
+					<!-- </div>
+				<div class="map-wrapper">
+					<div id="google-map" class="col-md-5"></div>
+				</div>
 			</div>
-			<div class="map-wrapper">
-				<div id="google-map" class="col-md-5"></div>
-			</div>
-		</div>
-    </div>
+		 </div>
+ -->
+	
+
 
 
 <%#= @hotels %>
