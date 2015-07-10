@@ -2,15 +2,94 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/* run this CSS if the screen size is larger than 300px */
-@media screen and (min-width: 300px) {
+/* run this CSS if the screen size is larger than 250px */
+@media screen and (min-width: 250px) {
 	a {
 		color: black;
 		text-decoration: none !important;
 	}
 	.results-image img {
+		width: 300px;
+		height: 240px;
+		box-shadow: 10px 10px 5px #888888;
+	}
+	.center-content {
+		display: inline;
+		text-align: center !important;
 		width: 350px;
-		height: 280px;
+	}
+	.hotel-name {
+		font-size: 20px;
+		color: black;
+		position: relative;
+		/*left: 35px;*/
+	}
+	.hotel-rating {
+		position: relative;
+		/*left: 20px;*/
+	}
+	.book-now {
+		position: relative;
+		/*left: 20px;*/
+	}
+	.hotel-wrapper {
+		width: 60vw;
+		text-align: center;
+	}
+	.all-hotels {
+		width: 100vw;
+		height: 30vh;
+		float: left;
+		display: block;
+		text-align: center;
+		padding: 10px 10px;
+		/*margin-left: 55px;*/
+		margin-top: 60px;
+		margin-bottom: 150px;
+	}
+	.price-info {
+		font-size: 20px;
+		color: white;
+	}
+	.price-box {
+		background-color: rgba(0,0,0,0.8);
+		width: 60px;
+		position: relative;
+		bottom: 40px;
+		left: 110px;
+	}
+	.grow {
+		transition: all .2s ease-in-out;
+	}
+	.grow:hover { 
+		transform: scale(1.1);
+	}
+	#google-map {
+		height: 30vh;
+		width: 100vw;
+		position: relative;
+	}
+	.map-wrapper {
+		position: fixed;
+		bottom: 0;
+		/*top: 6vh;*/
+		
+	}
+	.search-box {
+		display: inline-block;
+		width: 55vw;
+	}
+}
+
+	/* run this CSS if the screen size is larger than 630px */
+@media screen and (min-width: 630px) {
+	a {
+		color: black;
+		text-decoration: none !important;
+	}
+	.results-image img {
+		width: 300px;
+		height: 240px;
 		box-shadow: 10px 10px 5px #888888;
 	}
 	.center-content {
