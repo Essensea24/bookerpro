@@ -44,7 +44,8 @@
     		<% @detail["RoomTypes"]["RoomType"].each do |room| %> 
     			<div class="individual-room-container">
  					<% @images.each do |image| %>
- 						<% if image["roomTypeCode"].to_s == room["@roomCode"] %>
+ 					<%= image_tag
+ 						<% if image["roomTypeCode"].to_s == room["@roomCode"].to_s %>
 							<%= image_tag (image["url"][0...-5] + "b.jpg"), :class => "room-image" %>
 						<% end %>
 					<% end %>
