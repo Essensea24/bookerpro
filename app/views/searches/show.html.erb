@@ -202,7 +202,6 @@
 	<h2>Meeting Facility</h2>
 	<% @detail["HotelImages"]["HotelImage"].each do |image| %>
 		<% if image["caption"] == "Meeting Facility" %>
-		
 			<%= image_tag(image["url"][0...-5] + "b.jpg") %>
 		<% end %>	
 	<% end %>
@@ -236,17 +235,3 @@
 	<% @detail["HotelImages"]["HotelImage"].each do |image| %>
 		<%= image_tag(image["url"][0...-5] + "b.jpg")  %>
 	<% end %>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
