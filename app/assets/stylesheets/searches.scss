@@ -13,6 +13,7 @@
 		height: 240px;
 		box-shadow: 10px 10px 5px #888888;
 	}
+	
 	.center-content {
 		display: inline;
 		text-align: center !important;
@@ -22,15 +23,12 @@
 		font-size: 20px;
 		color: black;
 		position: relative;
-		/*left: 35px;*/
 	}
 	.hotel-rating {
 		position: relative;
-		/*left: 20px;*/
 	}
 	.book-now {
 		position: relative;
-		/*left: 20px;*/
 	}
 	.hotel-wrapper {
 		width: 60vw;
@@ -45,7 +43,7 @@
 		padding: 10px 10px;
 		/*margin-left: 55px;*/
 		margin-top: 60px;
-		margin-bottom: 150px;
+		margin-bottom: 100px;
 	}
 	.price-info {
 		font-size: 20px;
@@ -56,14 +54,14 @@
 		width: 60px;
 		position: relative;
 		bottom: 40px;
-		left: 110px;
+		left: 160px;
 	}
-	.grow {
+	/*.grow {
 		transition: all .2s ease-in-out;
 	}
 	.grow:hover { 
 		transform: scale(1.1);
-	}
+	}*/
 	#google-map {
 		height: 30vh;
 		width: 100vw;
