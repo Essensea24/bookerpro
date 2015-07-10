@@ -63,17 +63,19 @@
 	height: auto;
 }
 
-.room-selection-container .individual-room-container {
-	width: 44%;
-	height: auto;
+.individual-room-container {
+	width: 40%;
+	height: 40vh;
+	position: relative;
 	border: 2px black solid;
-	margin: 4vh 2.5% ;
+	margin: 4vh 2.5%;
+	overflow: hidden;
 	display: inline-block;
 }
 
 .room-image {
 	width: 100%;
-	height: auto;
+	display: inline-block;
 
 }
 
