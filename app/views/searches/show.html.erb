@@ -39,8 +39,8 @@
 		</div>
 	</div>
 	<hr>
+
 	<div class="room-selection-container">
-	<% @detail["RoomTypes"]["RoomType"].each do |detail| %>  
         <div class="individual-room-container">
 		</div>
                   <%= detail["description"] %>
@@ -63,7 +63,7 @@
 	</div>
 
 
-=======
+
 <%#= @detail %>
 <%#= @detail["HotelSummary"] %>
 	<!-- "name", "address1", "city", "stateProvinceCode", "postalCode", "countryCode", "hotelRating", "hotelRatingDisplay", "tripAdvisorRating", "tripAdvisorReviewCount", "tripAdvisorRatingUrl", "locationDescription", "highRate", "lowRate", "latitude", "longitude" -->
@@ -80,42 +80,45 @@
 <div class="hotelshow-container">
 </div>
 <div class="vwmargin2">
->>>>>>> 9c74aea6b812e9b81c376bce3865e39588fdf0ae
+
 </div>
 
 
+		</div>
+	</div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="sidebar-container">
-abc
 </div>
+
+<pre>
+	<%#= debug @detail["RoomTypes"]["RoomType"] %>
+</pre>
+
+
+<pre>
+	<%#= debug @images %>
+</pre>
+
+
+
+<hr>
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <h1 class="text-center">Hotel Information</h1>
@@ -271,3 +274,5 @@ abc
 		<%= image_tag(image["url"][0...-5] + "b.jpg")  %>
 	<% end %>
 >>>>>>> 9c74aea6b812e9b81c376bce3865e39588fdf0ae
+=======
+>>>>>>> showroom

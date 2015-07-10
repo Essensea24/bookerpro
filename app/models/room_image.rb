@@ -12,6 +12,7 @@ class RoomImage < ActiveRecord::Base
 			    "hotelId" => hotelId
 			    }
 
-		HTTParty.get(base_uri, query: query)
+			HTTParty.get(base_uri, query: query)
+		end
 
 end
