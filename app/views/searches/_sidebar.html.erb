@@ -1,3 +1,9 @@
+<div class="sidebar-container">
+	<div class ="sidebar-price-container">
+		<%= (number_to_currency(@room_responses["HotelRoomAvailabilityResponse"]["HotelRoomResponse"].first["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageRate"])) %>
+	</div>
+
+
 <div class="panel-group" id="accordion">
    <div class="panel panel-primary">
    
@@ -9,12 +15,11 @@
            </h4>
         </div>
 		
-        <div id="accordionOne" class="panel-collapse collapse in">
+        <div id="accordionOne" class="panel-collapse collapse">
           <div class="panel-body">
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            ullamco laboris nisi ut aliquip ex ea commodo consequat
+           <%= @detail["HotelDetails"]["amenitiesDescription"] %><br><br>
+           <%= @detail["HotelDetails"]["businessAmenitiesDescription"] %>
+
           </div>
         </div>
   </div>
@@ -24,17 +29,15 @@
           <div class="panel-heading">
           <h4 class="panel-title">
             <a data-toggle="collapse" data-parent="#accordion" href="#accordionTwo">
-              Collapsible Accordion 2
+              Reviews
             </a>
           </h4>
           </div>
 		 
         <div id="accordionTwo" class="panel-collapse collapse">
           <div class="panel-body">
-            Change does not roll in on the wheels of inevitability,
-            but comes through continuous struggle.
-            And so we must straighten our backs and work for
-            our freedom. A man can't ride you unless your back is bent.
+            Reviews: <%= @detail["HotelSummary"]["tripAdvisorReviewCount"] %> <br>
+            <%= image_tag @detail["HotelSummary"]["tripAdvisorRatingUrl"] %>
           </div>
         </div>
 		
@@ -45,7 +48,7 @@
         <div class="panel-heading">
           <h4 class="panel-title">
             <a data-toggle="collapse" data-parent="#accordion" href="#accordionThree">
-              Collapsible Accordion 3
+              Share
             </a>
           </h4>
         </div>
@@ -61,3 +64,6 @@
      </div>
 	 
  </div>
+</div>
+
+
