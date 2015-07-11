@@ -7,7 +7,7 @@
 .amenity-sidebar {
 	width: 32vw;
 	float: right;
-	top: -6vh;
+	top: -7vh;
 	right: 2vw;
 	position: relative;
 
@@ -17,10 +17,13 @@
 
 
 .sidebar-price-container {
-	background-color: rgba(0,0,0,0.8);
+	background-color: rgba(0,0,0,0.65);
 	min-width: 60px;
 	font-size: 20px;
 	color: white;
-	height: 5vh;
+	height: 7vh;
+	padding: .5vw 1vw;
+	border-radius: 3px;
+	margin-bottom: 8px;
 
 }
