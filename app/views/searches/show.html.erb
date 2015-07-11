@@ -2,19 +2,6 @@
 <br><br>
 <%= render 'sidebar' %>
 
-
-<div class="top-image-container">
-<%= image_tag (@detail["HotelImages"]["HotelImage"][0]["url"][0...-5] + "z.jpg"), :class => "top-image" %>
-</div>
-<div class="hotelshow-container">
-	<div class ="title-container">
-		<h2><%= @detail["HotelSummary"]["name"]%></h2>
-		<h5><%= @detail["HotelSummary"]["address1"]%>,
-		<%= @detail["HotelSummary"]["city"]%>,
-		<%= @detail["HotelSummary"]["stateProvinceCode"]%>
-		 <%= @detail["HotelSummary"]["countryCode"]%>
-		</h5>
-
 <section id="booker-logo">
 	<div class="top-image-container">
 	<%= image_tag (@detail["HotelImages"]["HotelImage"][0]["url"][0...-5] + "z.jpg"), :class => "top-image" %>
