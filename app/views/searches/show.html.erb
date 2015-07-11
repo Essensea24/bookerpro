@@ -74,7 +74,7 @@ $(function(){ // document ready
 		<% @room_responses["HotelRoomAvailabilityResponse"]["HotelRoomResponse"].each do |room_response|%>
 		
 				<% @detail["RoomTypes"]["RoomType"].each do |room_detail| %> 
-	 						<% if room_response["roomTypeCode"].to_s == room_detail["@roomCode"].to_s && room_response["RoomImages"]["RoomImage"].first[1] %>
+	 						<% if room_response["roomTypeCode"].to_s == room_detail["@roomCode"].to_s && room_response["RoomImages"] != nil %>
 								<%#= room['descriptionLong']%>
 								<div class="individual-room-container">
 									<%= image_tag (room_response["RoomImages"]["RoomImage"].first[1].to_s[0...-5] + "b.jpg"), :class => "room-image" %>
@@ -88,9 +88,9 @@ $(function(){ // document ready
 
 									<br>
 								</div>
-							<% elsif room_response["roomTypeCode"].to_s == room_detail["@roomCode"].to_s && room_response["RoomImages"]["RoomImage"].first[1] == nil %>
+							<% elsif room_response["roomTypeCode"].to_s == room_detail["@roomCode"].to_s && room_response["RoomImages"] == nil %>
 								<div class="individual-room-container">
-									<%= image_tag  (@detail["HotelImages"]["HotelImage"][0]["url"])%>"hi. stock photo here."	
+									<%= image_tag  (@detail["HotelImages"]["HotelImage"][0]["url"])%>"hi. stock photo here."<br>
 									<%= room_response["roomTypeDescription"] %><br>
 									<%= room_response["BedTypes"]["BedType"]["Description"] %><br>
 									<% if room_response["RateInfos"]["RateInfo"]["RoomGroup"]["Room"]["ChargeableNightlyRates"]["@promo"] == "true" %>
