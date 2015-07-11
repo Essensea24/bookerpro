@@ -54,6 +54,9 @@
 										<del><%= number_to_currency(room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageBaseRate"]) %></del>
 									<% end %>
 								<%= number_to_currency(room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageRate"]) %>
+								<%= button_tag 'BOOK NOW', :class => 'search-container btn-warning col-md-12' %>
+
+								<br>
 							</div>
 						<% elsif room_response["roomTypeCode"].to_s == room_detail["@roomCode"].to_s && room_response["RoomImages"]["RoomImage"].first[1] == nil %>
 							<div class="individual-room-container">
@@ -63,6 +66,8 @@
 									<del><%= number_to_currency(room_responseroom_response["RateInfos"]["RateInfo"]["RoomGroup"]["ChargeableRateInfo"]["@averageBaseRate"]) %></del>
 								<% end %>
 								<%= number_to_currency(room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageRate"]) %>
+								<%= button_tag 'BOOK NOW', :class => 'search-container btn-warning col-md-12' %>
+								<br>
 							</div>
 						<% end %>
 					
