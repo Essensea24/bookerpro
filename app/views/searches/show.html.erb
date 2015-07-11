@@ -50,11 +50,19 @@
 							<div class="individual-room-container">
 								<%= image_tag (room_response["RoomImages"]["RoomImage"].first[1].to_s[0...-5] + "b.jpg"), :class => "room-image" %>
 								<%= room_detail["description"] %><br>
+									<% if room_response["RateInfos"]["RateInfo"]["RoomGroup"]["Room"]["ChargeableNightlyRates"]["@promo"] == "true" %>
+										<del><%= number_to_currency(room_response["RateInfos"]["RateInfo"]["RoomGroup"]["Room"]["ChargeableNightlyRates"]["@baseRate"]) %></del>
+									<% end %>
+								<%= number_to_currency(room_response["RateInfos"]["RateInfo"]["RoomGroup"]["Room"]["ChargeableNightlyRates"]["@rate"]) %>
 							</div>
 						<% elsif room_response["roomTypeCode"].to_s == room_detail["@roomCode"].to_s && room_response["RoomImages"]["RoomImage"].first[1] == nil %>
 							<div class="individual-room-container">
-								"hi. stock photo here."	
+								<%= image_tag  (@detail["HotelImages"]["HotelImage"][0]["url"])%>"hi. stock photo here."	
 								<%= room_detail["description"] %><br>
+								<% if room_response["RateInfos"]["RateInfo"]["RoomGroup"]["Room"]["ChargeableNightlyRates"]["@promo"] == "true" %>
+									<del><%= number_to_currency(room_response["RateInfos"]["RateInfo"]["RoomGroup"]["Room"]["ChargeableNightlyRates"]["@baseRate"]) %></del>
+								<% end %>
+								<%= number_to_currency(room_response["RateInfos"]["RateInfo"]["RoomGroup"]["Room"]["ChargeableNightlyRates"]["@rate"]) %>
 							</div>
 						<% end %>
 					
