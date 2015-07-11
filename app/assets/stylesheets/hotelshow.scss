@@ -3,10 +3,10 @@
 	height: 100vh;
 	margin-left: 5vw;
 	margin-right: 2vw;
-	border: black 2px solid;
+	border: black 2px solid #999;
 	display: inline-block;
 	padding: 0;
-	background-color: lightgray;
+	background-color: rgba(0,0,0, 0.1);
 }
 
 .sidebar-container {
@@ -32,9 +32,10 @@
 }
 
 .title-container {
-	border: black 2px solid;
+	/*border: black 2px solid;*/
 	margin: 0 auto;
-	width: 35vw;
+	text-align: center;
+	width: 40vw;
 	height: 20vh;
 }
 
