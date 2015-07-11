@@ -1,64 +1,50 @@
-<div class="hotel-wrapper">
-	<div class="search-box">
-	    <%= render 'filter' %>
+<div id="all-content">
+
+	<div class="hotel-wrapper" id="map-padding">
+
+		<div class="search-box">
+			<%= render 'filter' %>
+		</div>
+
+		<% @hotels.each do |hotel| %>
+
+			<div id="booker-logo" class="all-hotels">
+
+				<div class="grow">
+
+					<%= link_to show_hotel_path(:hotelId => hotel["hotelId"], :class => "link-underline") do %>
+
+						<div class="results-image">
+
+							<div class="results-image-inner">
+
+								<img src="http://media.expedia.com<%= hotel["thumbNailUrl"][0...-5] + "b.jpg" %>" />
+
+								<div class="price-box">
+									<div class="hotel-rate price-info">$<%= hotel["lowRate"].round(0) %></div>
+								</div>
+
+								<div class="hotel-name"><%= hotel["name"] %></div>
+
+								<span class="hotel-rating"><%= hotel["hotelRating"] %> star hotel |</span>
+								<span><%= link_to " Book Now",show_hotel_path(:hotelId => hotel["hotelId"]), :class => "book-now" %></span>
+
+							</div>
+
+						</div>
+
+					<% end %>
+
+				</div>
+				
+			</div>
+
+		<% end %>
+
 	</div>
-<% @hotels.each do |hotel| %>
-	
-	    <div class="all-hotels">
-	    	<div class="grow">
-		        <%= link_to show_hotel_path(:hotelId => hotel["hotelId"], :class => "link-underline") do %>
-		        <div class="results-image">
-		            <img src="http://media.expedia.com<%= hotel["thumbNailUrl"][0...-5] + "b.jpg" %>" />
-		        </div>
-		            <div class="price-box"><div id="booker-logo" class="hotel-rate price-info">$<%= hotel["lowRate"].round(0) %></div></div>
-		   
-	            <div class="hotel-name" id="booker-logo"><%= hotel["name"] %></div>
-	            <span class="hotel-rating" id="booker-logo"><%= hotel["hotelRating"] %> star hotel |</span>
-	            <span><%= link_to " Book Now",show_hotel_path(:hotelId => hotel["hotelId"]), :id => "booker-logo", :class => "book-now" %></span>
-	        </div>
-	        <% end %>
-	    </div>
-	<% end %>
-	
+
+	<div class="map-wrapper">
+		<div id="google-map"></div>
+	</div>
+
 </div>
-
-<div class="map-wrapper">
-	<div id="google-map"></div>
-</div>
-
-
-
-
-
-
-
-
-
-
-<%# @hotels.each do |hotel| %>
-
-	<!-- <div class="col-md-6 search-results"> -->
-		<%#= link_to show_hotel_path(:hotelId => hotel["hotelId"], :class => "link-underline") do %>
-			<!-- <div class="hotel-container">
-				<br>
-			
-				<div id="image-overflow" class="grow">
-					
-					<div class="price-box">
-						<span id="booker-logo" class="price-info">$<%#= hotel["lowRate"].round(0) %>
-						</span>
-					</div>
-				</div> -->
-
-				<!-- <span id="booker-logo" class="title-name"> --><%#= hotel["name"] %><!-- </span> -->
-
-				<!-- 	<br> -->
-
-				<!-- <span id="booker-logo" class="hotel-info"> --><%#= hotel["hotelRating"] %> <!-- star hotel  | </span> -->
-
-				<%#= link_to "Book Now",show_hotel_path(:hotelId => hotel["hotelId"]) %>
-		<!-- 	</div> -->
-		<%# end %>
-		<!-- 	<hr>
-	</div> -->
-<%# end %>	

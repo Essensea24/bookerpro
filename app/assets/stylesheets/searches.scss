@@ -1,140 +1,118 @@
 // Place all the styles related to the searches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+a {
+	color: black;
+	text-decoration: none !important;
+}
+.results-image img {
+	width: 300px;
+	height: 240px;
+	box-shadow: 10px 10px 5px #888888;
+}
+.results-image-inner {
+	position: relative;
+	display: inline-block;
+}
+.hotel-name {
+	font-size: 20px;
+	color: black;
+}
+.all-hotels {
+	float: left;
+	display: block;
+}
+.price-info {
+	font-size: 20px;
+	color: white;
+}
+.price-box {
+	background-color: rgba(0,0,0,0.8);
+	min-width: 60px;
+	text-align: center;
+	display: inline-block;
+	position: relative;
+	bottom: 40px;
+	left: 0px;
+}
+.map-wrapper {
+	position: fixed;
+}
+.search-box {
+	background-color: rgba(0,0,0,0.6);
+	display: inline-block;
+	text-align: center;
+	left: 0;
+	right: 0;
+}
 /* run this CSS if the screen size is larger than 250px */
 @media screen and (min-width: 250px) {
-	a {
-		color: black;
-		text-decoration: none !important;
-	}
 	.results-image img {
 		width: 300px;
 		height: 240px;
-		box-shadow: 10px 10px 5px #888888;
-	}
-	
-	.center-content {
-		display: inline;
-		text-align: center !important;
-		width: 350px;
-	}
-	.hotel-name {
-		font-size: 20px;
-		color: black;
-		position: relative;
-	}
-	.hotel-rating {
-		position: relative;
-	}
-	.book-now {
-		position: relative;
+		display: inline-block;
+		margin: 0 auto;
 	}
 	.hotel-wrapper {
-		width: 60vw;
-		text-align: center;
+		height: 300px;
+		padding-bottom: 240px;
+		display: inline-block;
+	}
+	.grow {
+		width: 100vw;
+		display: inline;
+		position: relative;
+		left: 50px;
 	}
 	.all-hotels {
-		width: 100vw;
-		height: 30vh;
-		float: left;
-		display: block;
-		text-align: center;
-		padding: 10px 10px;
-		/*margin-left: 55px;*/
+		width: 300px;
+		height: 240px;
 		margin-top: 60px;
-		margin-bottom: 100px;
+		margin-bottom: 70px;
 	}
-	.price-info {
-		font-size: 20px;
-		color: white;
-	}
-	.price-box {
-		background-color: rgba(0,0,0,0.8);
-		width: 60px;
-		position: relative;
-		bottom: 40px;
-		left: 160px;
-	}
-	/*.grow {
-		transition: all .2s ease-in-out;
-	}
-	.grow:hover { 
-		transform: scale(1.1);
-	}*/
 	#google-map {
 		height: 30vh;
 		width: 100vw;
 		position: relative;
 	}
 	.map-wrapper {
-		position: fixed;
-		bottom: 0;
-		/*top: 6vh;*/
-		
+		bottom: 0vh;
 	}
 	.search-box {
-		display: inline-block;
-		width: 55vw;
+		width: 100vw;
+	}
+	#map-padding {
+		padding-bottom: 30vh;
+	}
+	#all-content {
+		height: 100vh;
+		display: inline;
+		margin: 0 auto;
+	}
+	.all-hotels:last-child {
+		margin-bottom: 50vh;
 	}
 }
-
-	/* run this CSS if the screen size is larger than 630px */
-@media screen and (min-width: 630px) {
-	a {
-		color: black;
-		text-decoration: none !important;
-	}
+	/* run this CSS if the screen size is larger than 600px */
+@media screen and (min-width: 600px) {
 	.results-image img {
 		width: 300px;
 		height: 240px;
-		box-shadow: 10px 10px 5px #888888;
 	}
-	.center-content {
-		display: inline;
-		text-align: center !important;
-		width: 350px;
-	}
-	.hotel-name {
-		font-size: 20px;
-		color: black;
-		position: relative;
-		left: 35px;
-	}
-	.hotel-rating {
-		position: relative;
-		left: 20px;
-	}
-	.book-now {
-		position: relative;
-		left: 20px;
+	.results-image {
+		width: 20vw;
 	}
 	.hotel-wrapper {
 		width: 60vw;
-		text-align: center;
 	}
 	.all-hotels {
 		width: 300px;
-		height: 200px;
-		float: left;
-		display: block;
-		text-align: center;
+		height: 240px;
 		padding: 10px 10px;
 		margin-left: 55px;
 		margin-top: 60px;
 		margin-bottom: 130px;
 	}
-	.price-info {
-		font-size: 20px;
-		color: white;
-	}
-	.price-box {
-		background-color: rgba(0,0,0,0.8);
-		width: 60px;
-		position: relative;
-		bottom: 40px;
-		left: 0px;
-	}
 	.grow {
 		transition: all .2s ease-in-out;
 	}
@@ -147,63 +125,40 @@
 		position: relative;
 	}
 	.map-wrapper {
-		position: fixed;
 		right: 0;
 		top: 6vh;
 	}
 	.search-box {
-		display: inline-block;
-		width: 55vw;
+		width: 60vw;
+	}
+	.all-hotels:last-child {
+		margin-bottom: 0vh;
+	}
+	.grow {
+		left: 0;
 	}
 }
 
 /* run this CSS if the screen size is larger than 880px */
 @media screen and (min-width: 880px) {
-	a {
-		color: black;
-		text-decoration: none !important;
-	}
 	.results-image img {
 		width: 200px;
 		height: 150px;
-		box-shadow: 10px 10px 5px #888888;
 	}
-	.center-content {
-		display: inline;
-		text-align: center !important;
-		width: 200px;
-	}
-	.hotel-name {
-		font-size: 20px;
-		color: black;
-		position: relative;
-		left: 7px;
+	.results-image {
+		width: 20vw;
 	}
 	.hotel-wrapper {
 		width: 60vw;
-		text-align: center;
 	}
 	.all-hotels {
 		width: 200px;
 		height: 150px;
-		float: left;
-		display: block;
 		padding: 10px 10px;
 		margin-left: 55px;
 		margin-top: 100px;
 		margin-bottom: 95px;
 	}
-	.price-info {
-		font-size: 20px;
-		color: white;
-	}
-	.price-box {
-		background-color: rgba(0,0,0,0.8);
-		width: 60px;
-		position: relative;
-		bottom: 40px;
-		left: 0px;
-	}
 	.grow {
 		transition: all .2s ease-in-out;
 	}
@@ -216,63 +171,40 @@
 		position: relative;
 	}
 	.map-wrapper {
-		position: fixed;
 		right: 0;
 		top: 6vh;
 	}
 	.search-box {
-		display: inline-block;
-		width: 55vw;
+		width: 60vw;
+	}
+	.all-hotels:last-child {
+		margin-bottom: 0vh;
+	}
+	.grow {
+		left: 0;
 	}
 }
 
 /* run this CSS if the screen is greater than 1200px */
 @media screen and (min-width: 1200px) {
-	a {
-		color: black;
-		text-decoration: none !important;
-	}
 	.results-image img {
 		width: 300px;
 		height: 200px;
-		box-shadow: 10px 10px 5px #888888;
 	}
-	.center-content {
-		display: inline;
-		text-align: center !important;
-		width: 300px;
+	.results-image {
+		width: 20vw;
 	}
-	.hotel-name {
-		font-size: 20px;
-		color: black;
-		position: relative;
-		left: 10px;
-	}
-
 	.hotel-wrapper {
+		height: 40vh;
 		width: 60vw;
-		text-align: center;
 	}
 	.all-hotels {
 		width: 300px;
 		height: 200px;
-		float: left;
-		display: block;
 		padding: 10px 10px;
 		margin-left: 55px;
 		margin-top: 60px;
-		margin-bottom: 75px;
-	}
-	.price-info {
-		font-size: 20px;
-		color: white;
-	}
-	.price-box {
-		background-color: rgba(0,0,0,0.8);
-		width: 60px;
-		position: relative;
-		bottom: 40px;
-		left: 0px;
+		margin-bottom: 110px;
 	}
 	.grow {
 		transition: all .2s ease-in-out;
@@ -286,13 +218,14 @@
 		position: relative;
 	}
 	.map-wrapper {
-		position: fixed;
 		right: 0;
 		top: 6vh;
 	}
 	.search-box {
-		display: inline-block;
-		width: 55vw;
+		width: 60vw;
+	}
+	.grow {
+		left: 0;
 	}
 }
 
