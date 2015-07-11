@@ -6,7 +6,7 @@
 	
 	    <div class="all-hotels">
 	    	<div class="grow">
-		        <%= link_to show_hotel_path(:hotelId => hotel["hotelId"], :class => "link-underline") do %>
+		        <%= link_to show_hotel_path(:hotelId => hotel["hotelId"]) do %>
 		        <div class="results-image">
 		            <img src="http://media.expedia.com<%= hotel["thumbNailUrl"][0...-5] + "b.jpg" %>" />
 		        </div>
