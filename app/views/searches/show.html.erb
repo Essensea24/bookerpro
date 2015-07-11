@@ -1,3 +1,26 @@
+<script>
+$(function(){ // document ready
+ 
+  var stickyTop = $('.amenity-sidebar').offset().top; // returns number 
+ 
+  $(window).scroll(function(){ // scroll event  
+ 
+    var windowTop = $(window).scrollTop(); // returns number
+ 
+    if (stickyTop < (windowTop+50)) {
+      $('.amenity-sidebar').css({ position: 'fixed', top: '50px', right: '2vw'});
+    }
+    else {
+      $('.amenity-sidebar').css({ position: 'relative', top: '-6vh', right: '2vw'});
+    }
+ 
+  });
+ 
+});
+</script>
+
+
+
 <section id="booker-logo">
 	<div class="top-image-container">
 	<%= image_tag (@detail["HotelImages"]["HotelImage"][0]["url"][0...-5] + "z.jpg"), :class => "top-image" %>

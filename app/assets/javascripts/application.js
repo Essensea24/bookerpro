@@ -16,6 +16,7 @@
 //= require moment
 //= require_tree .
 
+
 google.maps.event.addDomListener(window, 'load', initialize_my_map)
 google.maps.event.addDomListener(window, 'page:load', initialize_my_map)
 

@@ -195,7 +195,7 @@
     window.attachEvent('onresize', resizer);
   }
 
-  $.fn.sticky = function(method) {
+  $.fn.stick = function(method) {
     if (methods[method]) {
       return methods[method].apply(this, slice.call(arguments, 1));
     } else if (typeof method === 'object' || !method ) {
