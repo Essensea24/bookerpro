@@ -1,11 +1,9 @@
-
-<br><br>
-<%= render 'sidebar' %>
-
 <section id="booker-logo">
 	<div class="top-image-container">
 	<%= image_tag (@detail["HotelImages"]["HotelImage"][0]["url"][0...-5] + "z.jpg"), :class => "top-image" %>
 	</div>
+
+
 	<div class="hotelshow-container">
 		<div class="title-container">
 			<h2><%= @detail["HotelSummary"]["name"]%></h2>
@@ -46,6 +44,7 @@
 		</div>
 		<hr>
 
+
 		<div class="room-selection-container">
 
 
@@ -84,6 +83,11 @@
 				
 		<% end %>
 			</div>
+
+		</div>
+
+		<div class="amenity-sidebar">
+			<%= render 'sidebar' %>
 		</div>
 
 
