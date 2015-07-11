@@ -14,6 +14,9 @@ a {
 	position: relative;
 	display: inline-block;
 }
+.lower-info {
+	text-align: center;
+}
 .hotel-name {
 	font-size: 20px;
 	color: black;
@@ -53,22 +56,22 @@ a {
 		display: inline-block;
 		margin: 0 auto;
 	}
+	.results-image-inner {
+		position: relative;
+		display: inline-block;
+	}
 	.hotel-wrapper {
 		height: 300px;
 		padding-bottom: 240px;
 		display: inline-block;
-	}
-	.grow {
-		width: 100vw;
-		display: inline;
-		position: relative;
-		left: 50px;
 	}
 	.all-hotels {
 		width: 300px;
 		height: 240px;
 		margin-top: 60px;
 		margin-bottom: 70px;
+		margin-left: 50px;
+		margin-right: 50px;
 	}
 	#google-map {
 		height: 30vh;
@@ -94,7 +97,7 @@ a {
 	}
 }
 	/* run this CSS if the screen size is larger than 600px */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 480px) {
 	.results-image img {
 		width: 300px;
 		height: 240px;
@@ -109,7 +112,8 @@ a {
 		width: 300px;
 		height: 240px;
 		padding: 10px 10px;
-		margin-left: 55px;
+		margin-right: 0px;
+		margin-left: 0px;
 		margin-top: 60px;
 		margin-bottom: 130px;
 	}
@@ -156,6 +160,7 @@ a {
 		height: 150px;
 		padding: 10px 10px;
 		margin-left: 55px;
+		margin-right: 0px;
 		margin-top: 100px;
 		margin-bottom: 95px;
 	}
@@ -203,6 +208,7 @@ a {
 		height: 200px;
 		padding: 10px 10px;
 		margin-left: 55px;
+		margin-right: 0px;
 		margin-top: 60px;
 		margin-bottom: 110px;
 	}

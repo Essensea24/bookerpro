@@ -25,11 +25,13 @@
 								<div class="price-box">
 									<div class="hotel-rate price-info">$<%= hotel["lowRate"].round(0) %></div>
 								</div>
+								<div class="lower-info">
+									<div class="hotel-name"><%= hotel["name"] %></div>
 
-								<div class="hotel-name"><%= hotel["name"] %></div>
+									<span class="hotel-rating"><%= hotel["hotelRating"] %> star hotel |</span>
+									<span><%= link_to " Book Now",show_hotel_path(:hotelId => hotel["hotelId"]), :class => "book-now" %></span>
 
-								<span class="hotel-rating"><%= hotel["hotelRating"] %> star hotel |</span>
-								<span><%= link_to " Book Now",show_hotel_path(:hotelId => hotel["hotelId"]), :class => "book-now" %></span>
+								</div>
 
 							</div>
 
