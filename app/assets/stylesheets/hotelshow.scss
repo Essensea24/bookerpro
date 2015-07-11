@@ -6,7 +6,7 @@
 	border: black 2px solid #999;
 	display: inline-block;
 	padding: 0;
-	background-color: rgba(0,0,0, 0.1);
+	/*background-color: rgba(0,0,0, 0.1);*/
 }
 
 .sidebar-container {
@@ -33,16 +33,22 @@
 
 .title-container {
 	/*border: black 2px solid;*/
-	margin: 0 auto;
+	margin: 10px auto;
 	text-align: center;
-	width: 40vw;
+	width: 60vw;
 	height: 20vh;
+	padding: 10px;
+	background-color: rgba(0,0,0, 0.1);
 }
 
 .about-container {
-	border: black 2px solid;
+	/*border: black 2px solid;*/
+	text-align: center;
 	width: 100%;
 	height: 25vh;
+	padding: 5px;
+	margin: 10px auto;
+	background-color: rgba(0,0,0, 0.1);
 }
 
 
