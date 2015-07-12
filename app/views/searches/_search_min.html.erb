@@ -5,7 +5,7 @@
 <% @hotels.each do |hotel| %>
     <div class="all-hotels">
     	<div class="grow">
-	        <%= link_to show_hotel_path(:hotelId => hotel["hotelId"], :class => "link-underline clearfix") do %>
+	        <%= link_to show_hotel_path(:hotelId => hotel["hotelId"]), :class => "link-underline clearfix"	 do %>
 	            <img src="http://media.expedia.com<%= hotel["thumbNailUrl"][0...-5] + "b.jpg" %>" />
 	            <div class="price-box"><div id="booker-logo" class="hotel-rate price-info">$<%= hotel["lowRate"].round(0) %></div></div>
 	    </div>
