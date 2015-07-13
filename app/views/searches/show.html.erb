@@ -110,7 +110,11 @@ $(function(){ // document ready
 										<% end %>
 									<% end %>
 									<% if room_response["RateInfos"]["RateInfo"]["RoomGroup"]["Room"]["ChargeableNightlyRates"]["@promo"] == "true" %>
-										<del><%= number_to_currency(room_responseroom_response["RateInfos"]["RateInfo"]["RoomGroup"]["ChargeableRateInfo"]["@averageBaseRate"]) %></del>
+										<% if room_response["RateInfos"]["RateInfo"]["RoomGroup"]["ChargeableRateInfo"] %>
+
+										<%= room_response["RateInfos"]["RateInfo"]["RoomGroup"]["Room"]["ChargeableNightlyRates"]["@promo"] %>
+										<del><%= number_to_currency(room_response["RateInfos"]["RateInfo"]["RoomGroup"]["ChargeableRateInfo"]["@averageBaseRate"]) %></del>
+										<% end %>
 									<% end %>
 									<%= number_to_currency(room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageRate"]) %>
 									<%= button_tag 'BOOK NOW', :class => 'search-container btn-warning col-md-12' %>
