@@ -71,7 +71,7 @@ $(function(){ // document ready
 		<div class="room-selection-container">
 
 
-		<% @room_responses["HotelRoomAvailabilityResponse"]["HotelRoomResponse"].each do |room_response|%>
+		<% @room_responses.each do |room_response|%>
 		
 				<% @detail["RoomTypes"]["RoomType"].each do |room_detail| %> 
 	 						<% if room_response["roomTypeCode"].to_s == room_detail["@roomCode"].to_s && room_response["RoomImages"] != nil %>
@@ -122,8 +122,9 @@ $(function(){ // document ready
 				
 		<% end %>
 			</div>
-
+	
 		</div>
+
 
 		<div class="amenity-sidebar">
 			<%= render 'sidebar' %>
