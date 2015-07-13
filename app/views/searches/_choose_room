@@ -1,0 +1,43 @@
+<div class = "choose-room-container" >
+<%= form_tag show_hotel_path, method: :get do %>
+
+  
+
+  <div class="check-in-container col-md-2">
+  Check In<br>
+    <%= text_field_tag :arrivalDate, nil, placeholder: 'MM/DD/YYYY', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
+  </div>
+
+  <div class="check-out-container col-md-2">
+
+  Check Out<br>
+
+    <%= text_field_tag :departureDate, nil, placeholder: 'MM/DD/YYYY', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
+  </div>
+
+  <div class="rooms-selector-container col-md-1">
+    Rooms<br>
+    <div class="dropdown rooms-dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      
+      1<span class="caret"></span>
+      
+      </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+        </ul>
+    </div>
+  </div>
+    <div class="update-button-container col-md-2">
+    <%= submit_tag "Update", :class => 'search-container btn-warning' %>
+    </div>
+<% end %>
+</div>
+    
