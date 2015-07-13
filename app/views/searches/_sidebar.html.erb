@@ -5,22 +5,38 @@
 
 	</div>
 
+    <div class="panel panel-warning">
+  
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#accordionOne">
+              Hotel Details & Contact Info
+            </a>
+          </h4>
+        </div>
+    
+        <div id="accordionOne" class="panel-collapse collapse">
+          <div class="panel-body">
+          You must take personal responsibility.
+            You cannot change the circumstances,
+            the seasons, or the wind, but you can change yourself.
+            That is something you have charge of.
+        </div>
+    
+  </div>
 
-		
-
-
-<div class="panel-group" id="accordion">
-   <div class="panel panel-primary">
+  <div class="panel-group" id="accordion">
+   <div class="panel panel-warning">
    
         <div class="panel-heading">
             <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#accordionOne">
+            <a data-toggle="collapse" data-parent="#accordion" href="#accordionTwo">
               Amenities
             </a>
            </h4>
         </div>
 		
-        <div id="accordionOne" class="panel-collapse collapse">
+        <div id="accordionTwo" class="panel-collapse collapse">
           <div class="panel-body">
            <%= @detail["HotelDetails"]["amenitiesDescription"] %><br><br>
            <%= @detail["HotelDetails"]["businessAmenitiesDescription"] %>
@@ -29,35 +45,16 @@
         </div>
   </div>
   
-   <div class="panel panel-success">
-	  
-          <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#accordionTwo">
-              Reviews
-            </a>
-          </h4>
-          </div>
-		 
-        <div id="accordionTwo" class="panel-collapse collapse">
-          <div class="panel-body">
-            Reviews: <%= @detail["HotelSummary"]["tripAdvisorReviewCount"] %> <br>
-            <%= image_tag @detail["HotelSummary"]["tripAdvisorRatingUrl"] %>
-          </div>
-        </div>
-		
-   </div>
-   
-    <div class="panel panel-warning">
-	
+  <div class="panel panel-warning">
+  
         <div class="panel-heading">
           <h4 class="panel-title">
             <a data-toggle="collapse" data-parent="#accordion" href="#accordionThree">
-              Share
+              Map
             </a>
           </h4>
         </div>
-		
+    
         <div id="accordionThree" class="panel-collapse collapse">
           <div class="panel-body">
           You must take personal responsibility.
@@ -65,9 +62,48 @@
             the seasons, or the wind, but you can change yourself.
             That is something you have charge of.
         </div>
+    
+    </div>
+
+
+   <div class="panel panel-warning">
+	  
+          <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#accordionFour">
+              Ratings & Reviews
+            </a>
+          </h4>
+          </div>
+		 
+        <div id="accordionFour" class="panel-collapse collapse">
+          <div class="panel-body">
+            Reviews: <%= @detail["HotelSummary"]["tripAdvisorReviewCount"] %> <br>
+            <%= image_tag @detail["HotelSummary"]["tripAdvisorRatingUrl"] %>
+          </div>
+        </div>
 		
-     </div>
-	 
+   </div>
+
+
+    <div class="panel panel-warning">
+  
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#accordionFive">
+              Check In Information
+            </a>
+          </h4>
+        </div>
+    
+        <div id="accordionFive" class="panel-collapse collapse">
+          <div class="panel-body">
+          You must take personal responsibility.
+            You cannot change the circumstances,
+            the seasons, or the wind, but you can change yourself.
+            That is something you have charge of.
+        </div>
+  </div>
  </div>
 </div>
 
