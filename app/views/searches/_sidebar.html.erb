@@ -17,10 +17,11 @@
     
         <div id="accordionOne" class="panel-collapse collapse">
           <div class="panel-body">
-          You must take personal responsibility.
-            You cannot change the circumstances,
-            the seasons, or the wind, but you can change yourself.
-            That is something you have charge of.
+          <%= @detail["HotelSummary"]["name"] %><br>
+          <%= @detail["HotelSummary"]["address1"] %><br>
+          <%= @detail["HotelSummary"]["city"] %>,
+          <%= @detail["HotelSummary"]["stateProvinceCode"] %><br>
+
         </div>
     
   </div>
@@ -57,10 +58,9 @@
     
         <div id="accordionThree" class="panel-collapse collapse">
           <div class="panel-body">
-          You must take personal responsibility.
-            You cannot change the circumstances,
-            the seasons, or the wind, but you can change yourself.
-            That is something you have charge of.
+            <div id="google-map"></div>
+            </div>
+          </div>
         </div>
     
     </div>
@@ -98,10 +98,11 @@
     
         <div id="accordionFive" class="panel-collapse collapse">
           <div class="panel-body">
-          You must take personal responsibility.
-            You cannot change the circumstances,
-            the seasons, or the wind, but you can change yourself.
-            That is something you have charge of.
+          Check In:
+          <%= @detail["HotelDetails"]["checkInTime"] %><br>
+          Check Out:
+          <%= @detail["HotelDetails"]["checkOutTime"]%><br><br>
+          <%= @detail["HotelDetails"]["checkInInstructions"] %>
         </div>
   </div>
  </div>
