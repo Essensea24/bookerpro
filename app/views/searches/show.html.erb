@@ -79,7 +79,15 @@ $(function(){ // document ready
 								<div class="individual-room-container">
 									<%= image_tag (room_response["RoomImages"]["RoomImage"].first[1].to_s[0...-5] + "b.jpg"), :class => "room-image" %>
 									<%= room_response["roomTypeDescription"] %><br>
-									<%= room_response["BedTypes"]["BedType"]["description"] %><br>
+									<% if room_response["BedTypes"] %>
+										<% if room_response["BedTypes"]["BedType"].instance_of? Array %>
+											<% room_response["BedTypes"]["BedType"].each do |bed| %>	
+													<%= bed["description"] %><br>
+											<% end %>
+										<% else %>
+											<%= room_response["BedTypes"]["BedType"]["description"] %>
+										<% end %>
+									<% end %>
 										<% if room_response["RateInfos"]["RateInfo"]["RoomGroup"]["Room"]["ChargeableNightlyRates"]["@promo"] == "true" %>
 											<del><%= number_to_currency(room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageBaseRate"]) %></del>
 										<% end %>
@@ -92,7 +100,15 @@ $(function(){ // document ready
 								<div class="individual-room-container">
 									<%= image_tag  (@detail["HotelImages"]["HotelImage"][0]["url"])%>"hi. stock photo here."<br>
 									<%= room_response["roomTypeDescription"] %><br>
-									<%= room_response["BedTypes"]["BedType"]["Description"] %><br>
+									<% if room_response["BedTypes"] %>
+										<% if room_response["BedTypes"]["BedType"].instance_of? Array %>
+											<% room_response["BedTypes"]["BedType"].each do |bed| %>	
+													<%= bed["description"] %><br>
+											<% end %>
+										<% else %>
+											<%= room_response["BedTypes"]["BedType"]["description"] %>
+										<% end %>
+									<% end %>
 									<% if room_response["RateInfos"]["RateInfo"]["RoomGroup"]["Room"]["ChargeableNightlyRates"]["@promo"] == "true" %>
 										<del><%= number_to_currency(room_responseroom_response["RateInfos"]["RateInfo"]["RoomGroup"]["ChargeableRateInfo"]["@averageBaseRate"]) %></del>
 									<% end %>
