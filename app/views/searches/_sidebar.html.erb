@@ -102,7 +102,7 @@
           <%= @detail["HotelDetails"]["checkInTime"] %><br>
           Check Out:
           <%= @detail["HotelDetails"]["checkOutTime"]%><br><br>
-          <%= @detail["HotelDetails"]["checkInInstructions"] %>
+          <%= @detail["HotelDetails"]["checkInInstructions"].gsub(/<[^<>]*>/, "") %>
         </div>
   </div>
  </div>
