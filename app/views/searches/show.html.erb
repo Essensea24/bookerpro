@@ -1,4 +1,3 @@
-
 <script>
 $(function(){ // document ready
  
@@ -18,7 +17,7 @@ $(function(){ // document ready
   });
  
 });
-
+</script>
 
 <script type="text/javascript" src="/assets/jquery.tosrus.min.all.js"></script>
 
@@ -35,25 +34,26 @@ $(function(){ // document ready
    });
 </script>
 
-
 <!-- end of the slider lightbox -->
 
 
 
 <section id="booker-logo">
 
-	<div class="top-image-container top-image">
+    <div class="top-image-container top-image">
 
-		<div id="links">
-			
-			<a href=<%= @detail["HotelImages"]["HotelImage"][0]["url"][0...-5] + "z.jpg" %>>
-			<img class="top-image" src=<%= @detail["HotelImages"]["HotelImage"][0]["url"][0...-5] + "z.jpg" %> onError="this.onerror=null;this.src='<%=@detail["HotelImages"]["HotelImage"][0]["url"]%>';" >
-			</a>
-		
-			
-		</div>
+        <div id="links">
 
-	</div>
+            <% @detail["HotelImages"]["HotelImage"].each do |image| %>
+                <a href=<%= image["url"][0...-5] + "z.jpg" %>>
+                <img class="top-image" src=<%= image["url"][0...-5] + "z.jpg"%> onerror="this.onerror=null;this.src='<%=image["url"]%>';">
+                </a>
+            <% end %>
+        
+            
+        </div>
+
+    </div>
 
 
 	<div class="hotelshow-container">
