@@ -5,7 +5,7 @@
         <%= text_field_tag :destinationString, nil, placeholder: 'Destination', :id => 'autocomplete', :onFocus => 'geolocate()', :class => 'search-container' %>
     </div>
     <hr>
-	    Dates <%= text_field_tag :arrivalDate, nil, placeholder: 'Check In', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
+	    <%= text_field_tag :arrivalDate, nil, placeholder: 'Check In', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
 
 	    <%= text_field_tag :departureDate, nil, placeholder: 'Check Out', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
 
