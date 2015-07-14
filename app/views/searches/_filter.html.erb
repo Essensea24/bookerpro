@@ -6,6 +6,7 @@
     </div>
     <hr>
 	    Dates <%= text_field_tag :arrivalDate, params[:arrivalDate], placeholder: 'Check In', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
+	    <%= text_field_tag :arrivalDate, nil, placeholder: 'Check In', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
 
 	    <%= text_field_tag :departureDate, params[:departureDate], placeholder: 'Check Out', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
 

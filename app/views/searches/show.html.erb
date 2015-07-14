@@ -1,3 +1,4 @@
+
 <script>
 $(function(){ // document ready
  
@@ -19,11 +20,39 @@ $(function(){ // document ready
 });
 </script>
 
+<script type="text/javascript" src="/assets/jquery.tosrus.min.all.js"></script>
+
+
+ <link rel="stylesheet" type="text/css" href="/assets/jquery.tosrus.all.scss" />
+
+  <script type="text/javascript" src="http://cdn.jsdelivr.net/hammerjs/2.0.3/hammer.min.js"></script>
+
+<!-- testing the lightbox slider here -->
+
+<script type="text/javascript">
+   $(document).ready(function() {
+      $("#links a").tosrus();
+   });
+</script>
+
+
+<!-- end of the slider lightbox -->
+
 
 
 <section id="booker-logo">
-	<div class="top-image-container">
-	<%= image_tag (@detail["HotelImages"]["HotelImage"][0]["url"][0...-5] + "z.jpg"), :class => "top-image" %>
+
+	<div class="top-image-container top-image">
+
+		<div id="links">
+			
+			<a href=<%= @detail["HotelImages"]["HotelImage"][0]["url"][0...-5] + "z.jpg" %>>
+			<img class="top-image" src=<%= @detail["HotelImages"]["HotelImage"][0]["url"][0...-5] + "z.jpg" %>>
+			</a>
+		
+			
+		</div>
+
 	</div>
 
 
