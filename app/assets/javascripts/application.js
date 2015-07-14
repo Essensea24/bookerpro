@@ -12,10 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+
 //= require moment
 //= require_tree .
+// 
 
+
+$(document).ready(function() {
+	$("#testing").show();
+	$("#links a").tosrus();
+});
 
 google.maps.event.addDomListener(window, 'load', initialize_my_map)
 google.maps.event.addDomListener(window, 'page:load', initialize_my_map)
