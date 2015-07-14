@@ -296,4 +296,31 @@ $(function(){ // document ready
 			<%= image_tag(image["url"][0...-5] + "b.jpg")  %>
 		<% end %>
 	</section>
+
+<section>
+	<div class="grid js-masonry"
+	data-masonry-options='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
+		<div class="grid-item"><img src="https://s3-us-west-1.amazonaws.com/the-slinky/book.jpg" width="200" height="200" /></div>
+		<div class="grid-item"><img src="https://s3-us-west-1.amazonaws.com/the-slinky/hand.jpg" width="200" height="200" /></div>
+		<div class="grid-item"><img src="https://s3-us-west-1.amazonaws.com/the-slinky/login.jpg" width="200" height="200" /></div>
+		<div class="grid-item"><img src="https://s3-us-west-1.amazonaws.com/the-slinky/pen-copy.jpg" width="200" height="200" /></div>
+		<div class="grid-item"><img src="https://s3-us-west-1.amazonaws.com/the-slinky/slinky-s-1+copy.png" width="200" height="200" /></div>
+		<div class="grid-item"><img src="https://s3-us-west-1.amazonaws.com/the-slinky/book.jpg" width="200" height="200" /></div>
+		<div class="grid-item"><img src="https://s3-us-west-1.amazonaws.com/the-slinky/hand.jpg" width="200" height="200" /></div>
+		<div class="grid-item"><img src="https://s3-us-west-1.amazonaws.com/the-slinky/login.jpg" width="200" height="200" /></div>
+		<div class="grid-item"><img src="https://s3-us-west-1.amazonaws.com/the-slinky/pen-copy.jpg" width="200" height="200" /></div>
+		<div class="grid-item"><img src="https://s3-us-west-1.amazonaws.com/the-slinky/slinky-s-1+copy.png" width="200" height="200" /></div>
+		<div class="grid-item">
+
+
+			<% @detail["HotelImages"]["HotelImage"].each do |image| %>
+		        <span id="testing"><a href=<%= image["url"][0...-5] + "z.jpg" %>>
+		        <img class="top-image" src=<%= image["url"][0...-5] + "z.jpg"%> onerror="this.onerror=null;this.src='<%=image["url"]%>';">
+		        </a></span>
+		    <% end %>
+		</div>
+
+
+
+	</div>
 </section>
