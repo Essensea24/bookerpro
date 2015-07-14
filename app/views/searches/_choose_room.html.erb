@@ -3,88 +3,67 @@
 
   
 
-  <div class="check-in-container col-md-2">
+  <div class="check-in-container">
   Check In<br>
     <%= text_field_tag :arrivalDate, params[:arrivalDate], placeholder: 'MM/DD/YY', :data => {:provide => "datepicker"}, :class => 'search-container datepicker' %>
   </div>
 
-  <div class="check-out-container col-md-2">
+  <div class="check-out-container">
 
   Check Out<br>
 
     <%= text_field_tag :departureDate, params[:departureDate], placeholder: 'MM/DD/YY', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
   </div>
   <div class="hotelId">
-
-
     <%= text_field_tag :hotelId, @shovel["hotelId"], :class => 'search-container hotelId' %>
   </div>
 
 
-  <div class="rooms-selector-container col-md-1">
+  <div class="rooms-selector-container">
     Rooms<br>
-    <div class="dropdown rooms-dropdown">
-      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      
-      1<span class="caret"></span>
-      
-      </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">6</a></li>
-            <li><a href="#">7</a></li>
-            <li><a href="#">8</a></li>
-        </ul>
-    </div>
+    <select class="form-control">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+
+    </select>
   </div>
 
-  <div class="rooms-selector-container col-md-1">
+  <div class="rooms-selector-container">
     Adults<br>
-    <div class="dropdown rooms-dropdown">
-      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      
-      1<span class="caret"></span>
-      
-      </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">6</a></li>
-            <li><a href="#">7</a></li>
-            <li><a href="#">8</a></li>
-        </ul>
-    </div>
-  </div>
+    <select class="form-control">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
 
-  <div class="rooms-selector-container col-md-1">
+    </select>
+  </div>
+  <div class="rooms-selector-container">
     Children<br>
-    <div class="dropdown rooms-dropdown">
-      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      
-      1<span class="caret"></span>
-      
-      </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">6</a></li>
-            <li><a href="#">7</a></li>
-            <li><a href="#">8</a></li>
-        </ul>
-    </div>
+    <select class="form-control">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+
+    </select>
   </div>
 
-    <div class="update-button-container col-md-2">
+    <div class="update-button-container">
     <%= submit_tag "Update",  :class => 'search-container btn-warning' %>
     </div>
 <% end %>

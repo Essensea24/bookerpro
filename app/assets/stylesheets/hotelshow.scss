@@ -13,12 +13,12 @@
 	margin-top: 1vh;
 	position: relative;
 	width: 100vw;
-	height: 60vh;
+	height: 80vh;
 	overflow: hidden;
 }
 
 .top-image {
-	margin-top: 0vh;
+	margin-top: -5vh;
 	width: 100vw;
 }
 
@@ -55,7 +55,7 @@
 .choose-room-container DIV {
 	display: inline-block;
 	height: 8vh;
-	margin: 0 10px;
+	margin: 0 5px;
 	text-align: center;
 	font-size: 12px;
 }
@@ -64,7 +64,7 @@
 	width: 100%;
 	height: auto;
 	text-align: center;
-	margin: 5px;
+	margin: 0px;
 }
 
 .individual-room-container {
@@ -93,11 +93,13 @@
 }
 
 .hotelId {
-	display: none;
-
-	
+	display: none;	
 }
-
+.rooms-selector-container {
+	height: 6vh;
+	top: 6vh;
+	border-radius: 3px;
+}
 
 
 
