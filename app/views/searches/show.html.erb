@@ -35,7 +35,6 @@ $(function(){ // document ready
    });
 </script>
 
-
 <!-- end of the slider lightbox -->
 
 
@@ -45,10 +44,12 @@ $(function(){ // document ready
 	<div class="top-image-container top-image">
 
 		<div id="links">
-			
-			<a href=<%= @detail["HotelImages"]["HotelImage"][0]["url"][0...-5] + "z.jpg" %>>
-			<img class="top-image" src=<%= @detail["HotelImages"]["HotelImage"][0]["url"][0...-5] + "z.jpg" %>>
-			</a>
+
+			<% @detail["HotelImages"]["HotelImage"].each do |image| %>
+				<a href=<%= image["url"][0...-5] + "z.jpg" %>>
+				<img class="top-image" src=<%= image["url"][0...-5] + "z.jpg"  %>>
+				</a>
+			<% end %>
 		
 			
 		</div>
