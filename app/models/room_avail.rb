@@ -3,7 +3,7 @@ class RoomAvail < ActiveRecord::Base
 
 	base_uri "http://api.ean.com/ean-services/rs/hotel/v3/avail?"
 
-		def self.find(hotelId)
+		def self.find(hotelId, arrivalDate, departureDate)
 
 			query = 
 			    { 
@@ -13,8 +13,8 @@ class RoomAvail < ActiveRecord::Base
 			    "locale" => "en_US", 
 			    "curencyCode" => "USD",
 			    "hotelId" => hotelId,
-			    "arrivalDate" => "10/25/15",
-			    "departureDate" => "10/26/15",
+			    "arrivalDate" => arrivalDate,
+			    "departureDate" => departureDate,
 			    "includeRoomImages" => true,
 			    "RoomGroup" => 
 			      				{ 

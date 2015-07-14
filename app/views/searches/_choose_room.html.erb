@@ -5,15 +5,19 @@
 
   <div class="check-in-container col-md-2">
   Check In<br>
-    <%= text_field_tag :arrivalDate, nil, placeholder: 'MM/DD/YYYY', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
+    <%= text_field_tag :arrivalDate, @shovel["arrivalDate"], placeholder: 'MM/DD/YY', :data => {:provide => "datepicker"}, :class => 'search-container datepicker' %>
   </div>
 
   <div class="check-out-container col-md-2">
 
   Check Out<br>
 
-    <%= text_field_tag :departureDate, nil, placeholder: 'MM/DD/YYYY', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
+    <%= text_field_tag :departureDate, @shovel["arrivalDate"], placeholder: 'MM/DD/YY', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
   </div>
+  <div class="hotelId">
+    <%= text_field_tag :hotelId, @shovel["hotelId"], :class => 'search-container hotelId' %>
+  </div>
+
 
   <div class="rooms-selector-container col-md-1">
     Rooms<br>
@@ -79,7 +83,7 @@
   </div>
 
     <div class="update-button-container col-md-2">
-    <%= submit_tag "Update", :class => 'search-container btn-warning' %>
+    <%= submit_tag "Update",  :class => 'search-container btn-warning' %>
     </div>
 <% end %>
 </div>
