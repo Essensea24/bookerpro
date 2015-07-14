@@ -14,7 +14,7 @@
 
 				<div class="grow">
 
-					<%= link_to show_hotel_path(:hotelId => hotel["hotelId"],:arrivalDate =>"08/18/15", :departureDate => "08/19/15"),:class => "link-underline clearfix" do %>
+					<%= link_to show_hotel_path(:hotelId => hotel["hotelId"],:arrivalDate => params[:arrivalDate], :departureDate => params[:departureDate]),:class => "link-underline clearfix" do %>
 
 						<div class="results-image">
 
