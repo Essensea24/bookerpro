@@ -5,9 +5,9 @@
         <%= text_field_tag :destinationString, nil, placeholder: 'Destination', :id => 'autocomplete', :onFocus => 'geolocate()', :class => 'search-container' %>
     </div>
     <hr>
-	    Dates <%= text_field_tag :arrivalDate, nil, placeholder: 'Check In', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
+	    Dates <%= text_field_tag :arrivalDate, params[:arrivalDate], placeholder: 'Check In', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
 
-	    <%= text_field_tag :departureDate, nil, placeholder: 'Check Out', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
+	    <%= text_field_tag :departureDate, params[:departureDate], placeholder: 'Check Out', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
 
       <div class="dropdown guests-dropdown">
         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">

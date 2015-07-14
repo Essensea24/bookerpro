@@ -12,9 +12,11 @@
 
   Check Out<br>
 
-    <%= text_field_tag :departureDate, @shovel["arrivalDate"], placeholder: 'MM/DD/YY', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
+    <%= text_field_tag :departureDate, @shovel["departureDate"], placeholder: 'MM/DD/YY', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
   </div>
   <div class="hotelId">
+
+
     <%= text_field_tag :hotelId, @shovel["hotelId"], :class => 'search-container hotelId' %>
   </div>
 
