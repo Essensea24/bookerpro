@@ -1,0 +1,65 @@
+<% @room_responses.each do |room_response|%>
+			
+	<% @detail["RoomTypes"]["RoomType"].each do |room_detail| %> 
+		 						<% if room_response["roomTypeCode"].to_s == room_detail["@roomCode"].to_s && room_response["RoomImages"] != nil %>
+									<%#= room['descriptionLong']%>
+									<div class="individual-room-container">
+										<%= image_tag (room_response["RoomImages"]["RoomImage"].first[1].to_s[0...-5] + "b.jpg"), :class => "room-image" %>
+										<%= room_response["roomTypeDescription"] %><br>
+										<% if room_response["BedTypes"] %>
+											<div class ="bedtypes">
+											<% if room_response["BedTypes"]["BedType"].instance_of? Array %>
+												<% room_response["BedTypes"]["BedType"].each do |bed| %>	
+														<%= bed["description"] %><br>
+												<% end %>
+											<% else %>
+												<%= room_response["BedTypes"]["BedType"]["description"] %>
+											<% end %>
+											</div>
+										<% end %>
+											<% if room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["NightlyRatesPerRoom"]["NightlyRate"].instance_of? Array %>
+												<% if room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["NightlyRatesPerRoom"]["NightlyRate"][0]["@promo"] == "true" %>
+													<del><%= number_to_currency(room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageBaseRate"]) %></del>
+												<% end %>
+											<% elsif room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["NightlyRatesPerRoom"]["NightlyRate"].instance_of? Hash %>
+												<% if room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["NightlyRatesPerRoom"]["NightlyRate"]["@promo"] == "true" %>
+												 <del><%= number_to_currency(room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageBaseRate"]) %></del>
+												<% end %>
+											<% end %>
+
+										<%= number_to_currency(room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageRate"]) %>
+										<%= button_tag 'BOOK NOW', :class => 'search-container btn-warning col-md-12' %>
+
+										<br>
+									</div>
+								<% elsif room_response["roomTypeCode"].to_s == room_detail["@roomCode"].to_s && room_response["RoomImages"] == nil %>
+									<div class="individual-room-container">
+										<%= image_tag  (@detail["HotelImages"]["HotelImage"][0]["url"]), :class => "room-image"%>"hi. stock photo here."<br>
+										<%= room_response["roomTypeDescription"] %><br>
+										<% if room_response["BedTypes"] %>
+											<% if room_response["BedTypes"]["BedType"].instance_of? Array %>
+												<% room_response["BedTypes"]["BedType"].each do |bed| %>	
+														<%= bed["description"] %><br>
+												<% end %>
+											<% else %>
+												<%= room_response["BedTypes"]["BedType"]["description"] %>
+											<% end %>
+										<% end %>
+										<% if room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["NightlyRatesPerRoom"]["NightlyRate"].instance_of? Array %>
+											<% if room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["NightlyRatesPerRoom"]["NightlyRate"][0]["@promo"] == "true" %>
+													<del><%= number_to_currency(room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageBaseRate"]) %></del>
+											<% end %>
+										<% elsif room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["NightlyRatesPerRoom"]["NightlyRate"].instance_of? Hash %>
+												<% if room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["NightlyRatesPerRoom"]["NightlyRate"]["@promo"] == "true" %>
+												 <del><%= number_to_currency(room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageBaseRate"]) %></del>
+												<% end %>
+										<% end %>
+										<%= number_to_currency(room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageRate"]) %>
+										<%= button_tag 'BOOK NOW', :class => 'search-container btn-warning col-md-12' %>
+										<br>
+									</div>
+								<% end %>
+							
+	<% end %>
+					
+<% end %>
