@@ -23,6 +23,12 @@ $(document).ready(function() {
 	$("#links a").tosrus();
 });
 
+$('.grid').masonry({
+  // options...
+  itemSelector: '.grid-item',
+  columnWidth: 200
+});
+
 google.maps.event.addDomListener(window, 'load', initialize_my_map)
 google.maps.event.addDomListener(window, 'page:load', initialize_my_map)
 
