@@ -105,11 +105,13 @@
 	display: none;
 }
 .grid {
-	margin: 0 auto;
+	
 }
 .grid-item {
 	width: 200px;
+	height: 150px;
 	padding: 1px;
+	
 }
 .grid-item img:hover {
 	opacity: 0.9;
