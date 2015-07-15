@@ -42,7 +42,7 @@ a {
 	position: fixed;
 }
 .search-box {
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0);
 	display: inline-block;
 	text-align: center;
 	left: 0;
@@ -96,7 +96,7 @@ a {
 		margin-bottom: 50vh;
 	}
 }
-	/* run this CSS if the screen size is larger than 600px */
+	/* run this CSS if the screen size is larger than 480px */
 @media screen and (min-width: 480px) {
 	.results-image img {
 		width: 300px;
