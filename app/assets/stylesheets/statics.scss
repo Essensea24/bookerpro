@@ -40,7 +40,7 @@ h3 {
 }
 #homepage-float {
     background-color: rgba(0, 0, 0, 0.6);
-    #border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.7);
     width: 100vw;
     height: 15vh;
     position: absolute;
@@ -60,4 +60,28 @@ h3 {
 	top: 6vh;
 	border-radius: 3px;
 }
-
+/* run this CSS if the screen size is larger than 250px */
+@media screen and (min-width: 250px) {
+	.homepage-title {
+		position: relative;
+		bottom: 17vh;
+	}
+	#homepage-float {
+		height: 28vh;
+	}
+	#homepage-photo {
+		height: 100vh;
+	}
+}
+@media screen and (min-width: 690px) {
+	.homepage-title {
+		position: relative;
+		bottom: 0vh;
+	}
+	#homepage-float {
+		height: 15vh;
+	}
+	#homepage-photo {
+		height: 100vh;
+	}
+}
