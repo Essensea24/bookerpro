@@ -3,6 +3,7 @@
 	height: 100vh;
 	display: inline-block;
 	padding: 0;
+	font-family: 'Lato';
 }
 .amenity-sidebar {
 	width: 32vw;
@@ -16,12 +17,12 @@
 .sidebar-price-container {
 	background-color: rgba(0,0,0,0.65);
 	min-width: 60px;
-	font-size: 20px;
+	font-size: 22px;
 	color: white;
 	height: 7vh;
 	padding: .5vw 1vw;
-	border-radius: 3px;
-	font-family: 'Lato';
+	border-radius: 2px;
+
 	
 	position: relative;
 }
@@ -33,7 +34,7 @@
 
 .price {
 	float: left;
-	font-weight: 400;
+	font-weight: 300;
 
 }
 

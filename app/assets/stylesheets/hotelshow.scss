@@ -80,10 +80,34 @@
 	height: auto;
 	margin:	0 5px;
 	text-align: left;
-	font-size: 11px;
+	font-size: 12px;
 	font-family: 'Lato';
 	font-weight: 400;
 }
+
+.choose-room-container .search-container {
+	height: 34px;
+	border: 1px solid #ccc;
+}
+
+.choose-room-container .btn-small {
+	height: 34px;
+	background-color: #fff;
+	border-width: 1px;
+
+}
+
+.rooms-selector-container {
+	border-radius: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+}
+
+.rooms-selector-container .form-control {
+	border-radius: 2px;
+
+}
+
 
 
 .room-selection-container {
@@ -94,10 +118,6 @@
 	font-size: 12px;
 	font-family: 'Lato';
 	font-weight: 400;
-}
-
-.rooms-selector {
-	text-align: center;
 }
 
 .individual-room-container {
@@ -131,7 +151,7 @@
 .rooms-selector-container {
 	height: 6vh;
 	top: 6vh;
-	border-radius: 3px;
+	border-radius: 2px;
 }
 
 #testing {
