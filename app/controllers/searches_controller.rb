@@ -4,7 +4,9 @@ class SearchesController < ApplicationController
     response = ShowRemote.find(params[:hotelId], params[:options])
     @detail = response["HotelInformationResponse"]
     @room_responses = []
-    @shovel = RoomAvail.find(params[:hotelId], params[:arrivalDate],params[:departureDate])["HotelRoomAvailabilityResponse"]
+    abc = []
+    
+    @shovel = RoomAvail.find(params[:hotelId], params[:arrivalDate],params[:departureDate], abc)["HotelRoomAvailabilityResponse"]
     if @shovel["HotelRoomResponse"].instance_of? Hash 
       @room_responses << @shovel["HotelRoomResponse"]
     elsif @shovel["HotelRoomResponse"].instance_of? Array

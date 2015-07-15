@@ -3,7 +3,7 @@ class RoomAvail < ActiveRecord::Base
 
 	base_uri "http://api.ean.com/ean-services/rs/hotel/v3/avail?"
 
-		def self.find(hotelId, arrivalDate, departureDate)
+		def self.find(hotelId, arrivalDate, departureDate, abc)
 
 			query = 
 			    { 
@@ -18,14 +18,12 @@ class RoomAvail < ActiveRecord::Base
 			    "includeRoomImages" => true,
 			    "RoomGroup" => 
 			      				{ 
-			                	"Room" =>[
-			                        {
+			                	"Room" => 
+			                        [{
 			                        "numberOfAdults" => 2,
 			                        "numberofChildren" => 0
-			                        },{
-			                        "numberOfAdults" => 2,
-			                        "numverofChildren" => 0
-			                        }
+			                        }]
+			                    	
 			                	}
 			    }
 
