@@ -6,6 +6,7 @@
 	border: black 2px solid #999;
 	display: inline-block;
 	padding: 0;
+
 	/*background-color: rgba(0,0,0, 0.1);*/
 }
 
@@ -25,46 +26,78 @@
 .title-container {
 	/*border: black 2px solid;*/
 	margin: 10px auto;
-	text-align: center;
 	width: 60vw;
-	height: 20vh;
-	padding: 10px;
-	background-color: rgba(0,0,0, 0.1);
+	height: auto;
+	padding: 5px;
+	font-family: 'Lato';
+	font-weight: 700;
+	position: relative;
+
+
 }
+
+.title-container .centered-container {
+	text-align: left;
+	margin: 0 auto;
+	position: relative;
+}
+
+
 
 .about-container {
 	/*border: black 2px solid;*/
-	text-align: center;
+	text-align: left;
 	width: 100%;
-	height: 25vh;
+	height: auto;
 	padding: 5px;
 	margin: 10px auto;
-	background-color: rgba(0,0,0, 0.1);
+	font-family: 'Lato';
+	font-weight: 400;
+}
+
+.about-container H4 {
+	font-weight: 400;
 }
 
 
 .choose-room-container {
-	width: 60vw;
+	width: 100%;
 	height: auto;
-	padding: 20px;
+	padding: 5px;
 	margin: 10px auto;
-	text-align: center;
-	background-color: rgba(0,0,0, 0.1);
+	text-align: left;
+	font-family: 'Lato';
+	font-weight: 300;
+
+}
+
+.choose-room-container H4 {
+	font-weight: 400;
 }
 
 .choose-room-container DIV {
 	display: inline-block;
-	height: 8vh;
-	margin: 0 5px;
-	text-align: center;
-	font-size: 12px;
+	height: auto;
+	margin:	0 5px;
+	text-align: left;
+	font-size: 11px;
+	font-family: 'Lato';
+	font-weight: 400;
 }
+
 
 .room-selection-container {
 	width: 100%;
 	height: auto;
 	text-align: center;
-	margin: 0px;
+	margin: 5px;
+	font-size: 12px;
+	font-family: 'Lato';
+	font-weight: 400;
+}
+
+.rooms-selector {
+	text-align: center;
 }
 
 .individual-room-container {

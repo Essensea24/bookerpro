@@ -1,7 +1,11 @@
 <div class="sidebar-container">
 	<div class="sidebar-price-container">
-		<%= (number_to_currency(@room_responses.first["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageRate"])) %>
-		Per Night
+    <div class="price">
+		  <%= (number_to_currency(@room_responses.first["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageRate"])) %>
+    </div>
+    <div class="per-night">
+      Per Night
+    </div>
 
 	</div>
   <div class="panel-group" id="accordion">

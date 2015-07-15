@@ -21,4 +21,26 @@
 	height: 7vh;
 	padding: .5vw 1vw;
 	border-radius: 3px;
+	font-family: 'Lato';
+	
+	position: relative;
+}
+
+.sidebar-price-container DIV {
+	display: inline-block;
+	position: relative;
+}
+
+.price {
+	float: left;
+	font-weight: 400;
+
+}
+
+.per-night {
+	float: right;
+	font-size: 16px;
+	font-weight: 300;
+	bottom: -5px;
+
 }

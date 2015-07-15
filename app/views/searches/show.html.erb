@@ -38,23 +38,29 @@ $(function(){ // document ready
 
 		<div class="hotelshow-container">
 			<div class="title-container">
-				<h2><%= @detail["HotelSummary"]["name"]%></h2>
-				<h5><%= @detail["HotelSummary"]["address1"]%>,
-				<%= @detail["HotelSummary"]["city"]%>,
-				<%= @detail["HotelSummary"]["stateProvinceCode"]%>
-				 <%= @detail["HotelSummary"]["countryCode"]%>
-				</h5>
+				<div class="centered-container">
+					<h2><%= @detail["HotelSummary"]["name"]%></h2>
+					<h5><%= @detail["HotelSummary"]["address1"]%>,
+					<%= @detail["HotelSummary"]["city"]%>,
+					<%= @detail["HotelSummary"]["stateProvinceCode"]%>
+					 <%= @detail["HotelSummary"]["countryCode"]%>
+					</h5>
+				</div>
 			</div>
+			<hr>
 
 			<div class="about-container">
-
-				<h4>About This Hotel</h4>
+				<h4>About This Hotel</h4><br>
 				<%= @detail["HotelDetails"]["locationDescription"] %><br><br>
 				<p>The room rates listed are for double occupancy per room unless otherwise stated and exclude tax recovery charges and service fees.</p>
-
+				<hr>
 			</div>
 
-			<%= render 'choose_room' %>
+			<div class="choose-room-container">
+				<h4>Choose Your Room</h4><br>
+				<%= render 'choose_room' %>
+				<hr>
+			</div>
 
 
 			<div class="room-selection-container">
@@ -123,26 +129,6 @@ $(function(){ // document ready
 					
 				<% end %>
 					</div>
-			
-				</div>
-
-
-			<div class="amenity-sidebar">
-
-				<%= render 'sidebar' %>
-
-			</div>
-
-	</section>
-
-<hr><hr>
-
-<h1 class="text-center">View All Photos</h1>
-
-<br><br>
-
-
-
 <section class="masonry-grid">
 	<div class="grid js-masonry"
 		data-masonry-options='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
@@ -160,3 +146,13 @@ $(function(){ // document ready
 		</div>
 	</div>
 </section>
+				</div>
+
+
+			<div class="amenity-sidebar">
+
+				<%= render 'sidebar' %>
+
+	
+
+
