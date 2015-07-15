@@ -5,8 +5,8 @@
         <%= text_field_tag :destinationString, nil, placeholder: 'Destination', :id => 'autocomplete', :onFocus => 'geolocate()', :class => 'search-container' %>
     </div>
     <hr>
-	    Dates <%= text_field_tag :arrivalDate, params[:arrivalDate], placeholder: 'Check In', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
-	    <%= text_field_tag :arrivalDate, nil, placeholder: 'Check In', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
+	    <%= text_field_tag :arrivalDate, params[:arrivalDate], placeholder: 'Check In', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
+	    <%#= text_field_tag :arrivalDate, nil, placeholder: 'Check In', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
 
 	    <%= text_field_tag :departureDate, params[:departureDate], placeholder: 'Check Out', :data => {:provide => "datepicker"}, :class => 'search-container datepicker'  %>
 
@@ -25,6 +25,7 @@
       <hr>
       Price Range <b>$0</b> <input id="ex2" type="text" class="span2" value="" data-slider-min="0" data-slider-max="700" data-slider-step="1" data-slider-value="[50,500]"/> <b>$700</b>
   	<% end %>
+    <hr>
 </section>
 </body>
 
