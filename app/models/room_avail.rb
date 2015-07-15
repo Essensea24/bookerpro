@@ -18,9 +18,13 @@ class RoomAvail < ActiveRecord::Base
 			    "includeRoomImages" => true,
 			    "RoomGroup" => 
 			      				{ 
-			                	"Room" =>
+			                	"Room" =>[
 			                        {
-			                        "numberOfAdults" => 2
+			                        "numberOfAdults" => 2,
+			                        "numberofChildren" => 0
+			                        },{
+			                        "numberOfAdults" => 2,
+			                        "numverofChildren" => 0
 			                        }
 			                	}
 			    }
