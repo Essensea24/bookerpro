@@ -72,6 +72,17 @@ h3 {
 	#homepage-photo {
 		height: 100vh;
 	}
+	#locationField {
+		width: 80%;
+	}
+	.datepicker {
+		width: 39%;
+		margin: 0.5%;
+	}
+	.submit-button {
+		width: 30%;
+		margin: 1%;
+	}
 }
 @media screen and (min-width: 690px) {
 	.homepage-title {
@@ -79,9 +90,21 @@ h3 {
 		bottom: 0vh;
 	}
 	#homepage-float {
-		height: 15vh;
+		height: 19vh;
 	}
 	#homepage-photo {
 		height: 100vh;
+	}
+	#locationField {
+		width: 30%;
+		margin: 0.5%;
+	}
+	.datepicker {
+		width: 20%;
+		margin: 0.5%;
+	}
+	.submit-button {
+		width: 20%;
+		margin: 0.5%;
 	}
 }
