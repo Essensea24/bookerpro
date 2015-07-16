@@ -151,20 +151,24 @@ a {
 /* run this CSS if the screen size is larger than 880px */
 @media screen and (min-width: 880px) {
 	.results-image img {
-		width: 200px;
-		height: 150px;
+		/*width: 200px;
+		height: 150px;*/
+		width: 23vw;
+		height: 23vh;
 	}
 	.results-image {
-		width: 20vw;
+		/*width: 20vw;*/
 	}
 	.hotel-wrapper {
 		width: 60vw;
 	}
 	.all-hotels {
-		width: 200px;
-		height: 150px;
+		/*width: 200px;
+		height: 150px;*/
+		width: 23vw;
+		height: 23vh;
 		padding: 10px 10px;
-		margin-left: 55px;
+		margin-left: 35px;
 		margin-right: 0px;
 		margin-top: 100px;
 		margin-bottom: 95px;
@@ -198,19 +202,23 @@ a {
 /* run this CSS if the screen is greater than 1200px */
 @media screen and (min-width: 1200px) {
 	.results-image img {
-		width: 300px;
-		height: 200px;
+		/*width: 375px;
+		height: 250px;*/
+		width: 25vw;
+		height: 30vh;
 	}
 	.results-image {
-		width: 20vw;
+		/*width: 20vw;*/
 	}
 	.hotel-wrapper {
 		height: 40vh;
 		width: 60vw;
 	}
 	.all-hotels {
-		width: 300px;
-		height: 200px;
+		width: 25vw;
+		height: 30vh;
+		/*width: 375px;
+		height: 250px;*/
 		padding: 10px 10px;
 		margin-left: 55px;
 		margin-right: 0px;
@@ -225,7 +233,7 @@ a {
 	}
 	#google-map {
 		height: 100vh;
-		width: 40vw;
+		width: 35vw;
 		position: relative;
 	}
 	.map-wrapper {
@@ -233,7 +241,7 @@ a {
 		top: 6vh;
 	}
 	.search-box {
-		width: 60vw;
+		width: 65vw;
 	}
 	.grow {
 		left: 0;
