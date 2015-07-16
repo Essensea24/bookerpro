@@ -52,18 +52,6 @@
 								<% elsif room_response["roomTypeCode"].to_s == room_detail["@roomCode"].to_s && room_response["RoomImages"] == nil %>
 									<div class="individual-room-container">
 										<%= image_tag  (@detail["HotelImages"]["HotelImage"][0]["url"]), :class => "room-image"%>
-										<% if room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["NightlyRatesPerRoom"]["NightlyRate"].instance_of? Array %>
-											<% if room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["NightlyRatesPerRoom"]["NightlyRate"][0]["@promo"] == "true" %>
-													<del><%= number_to_currency(room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageBaseRate"]) %></del>
-											<% end %>
-										<% elsif room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["NightlyRatesPerRoom"]["NightlyRate"].instance_of? Hash %>
-												<% if room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["NightlyRatesPerRoom"]["NightlyRate"]["@promo"] == "true" %>
-												 <del><%= number_to_currency(room_response["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageBaseRate"]) %></del>
-												<% end %>
-										<% end %>
-
-
-
 
 										<div class="price-box">
 											<div class="hotel-rate price-info">
