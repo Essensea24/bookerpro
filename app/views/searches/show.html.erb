@@ -39,7 +39,7 @@ $(function(){ // document ready
 		<div class="hotelshow-container">
 			<div class="title-container">
 				<div class="centered-container">
-					<h1><%= @detail["HotelSummary"]["name"]%></h1>
+					<h1><%= @detail["HotelSummary"]["name"].gsub(/&amp;/, '&')%></h1>
 					<h4><%= @detail["HotelSummary"]["address1"]%>,
 					<%= @detail["HotelSummary"]["city"]%>,
 					<%= @detail["HotelSummary"]["stateProvinceCode"]%>

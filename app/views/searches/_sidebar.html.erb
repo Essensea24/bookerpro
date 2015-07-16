@@ -22,7 +22,7 @@
     
         <div id="accordionOne" class="panel-collapse collapse">
           <div class="panel-body">
-          <%= @detail["HotelSummary"]["name"] %><br>
+          <%= @detail["HotelSummary"]["name"].gsub(/&amp;/, '&') %><br>
           <%= @detail["HotelSummary"]["address1"] %><br>
           <%= @detail["HotelSummary"]["city"] %>,
           <%= @detail["HotelSummary"]["stateProvinceCode"] %><br>
