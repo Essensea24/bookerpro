@@ -39,8 +39,8 @@ $(function(){ // document ready
 		<div class="hotelshow-container">
 			<div class="title-container">
 				<div class="centered-container">
-					<h2><%= @detail["HotelSummary"]["name"]%></h2>
-					<h5><%= @detail["HotelSummary"]["address1"]%>,
+					<h1><%= @detail["HotelSummary"]["name"]%></h1>
+					<h4><%= @detail["HotelSummary"]["address1"]%>,
 					<%= @detail["HotelSummary"]["city"]%>,
 					<%= @detail["HotelSummary"]["stateProvinceCode"]%>
 					 <%= @detail["HotelSummary"]["countryCode"]%><span>  |  </span>
@@ -49,27 +49,27 @@ $(function(){ // document ready
         					<%= render_stars(@detail["HotelSummary"]["hotelRating"]) %>
    							</div> 
     					<% end %>	
-					</h5>
+					</h4>
 				</div>
 			</div>
 			<hr>
 
 			<div class="about-container">
-				<h4>About This Hotel</h4><br>
-				<%= @detail["HotelDetails"]["locationDescription"] %><br><br>
-				<p>The room rates listed are for double occupancy per room unless otherwise stated and exclude tax recovery charges and service fees.</p>
+				<h3>About This Hotel</h3><br>
+				<p><%= @detail["HotelDetails"]["locationDescription"] %><br><br>
+				The room rates listed are for double occupancy per room unless otherwise stated and exclude tax recovery charges and service fees.</p>
 				<hr>
 			</div>
 
 			<div class="choose-room-container">
-				<h4>Choose Your Room</h4><br>
+				<h3>Choose Your Room</h3><br>
 				<%= render 'choose_room' %>
 				<hr>
 			</div>
 
 
 			<div class="room-selection-container">
-				<h4> Room Options </h4>
+				<h3> Room Options </h3>
 				<%= render 'rooms' %>
 			</div>
 <section class="masonry-grid">

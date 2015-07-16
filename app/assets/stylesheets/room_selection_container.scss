@@ -13,10 +13,11 @@
 	width: 48%;
 	height: 50vh;
 	position: relative;
-	border: 2px black solid;
+	border: 1px rgba(0,0,0,0.1) solid;
 	margin: 20px 5px;
 	overflow: hidden;
 	display: inline-block;
+	text-align: left;
 }
 
 .room-image {
@@ -27,4 +28,18 @@
 
 .bedtypes {
 	border: 1px solid black;
+}
+
+.individual-room-container .price-box {
+	background-color: rgba(0,0,0,0.8);
+	min-width: 60px;
+	text-align: center;
+	display: inline-block;
+	position: absolute;
+	top: 46%;
+	height: 33px;
+	left: 0px;
+	padding: 2px;
+	border-bottom-right-radius: 2px;
+	border-top-right-radius: 2px;
 }
