@@ -6,108 +6,104 @@
     <div class="per-night">
       Per Night
     </div>
-
 	</div>
-  <div class="panel">
+  <div class="accordion" id="accordion2">
+    <div class="panel">
     
-  
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#accordionOne">
-              Hotel Details & Contact Info
-            </a>
-          </h4>
-        </div>
-
-    
-        <div id="accordionOne" class="panel-collapse collapse">
-          <div class="panel-body">
-          <%= @detail["HotelSummary"]["name"].gsub(/&amp;/, '&') %><br>
-          <%= @detail["HotelSummary"]["address1"] %><br>
-          <%= @detail["HotelSummary"]["city"] %>,
-          <%= @detail["HotelSummary"]["stateProvinceCode"] %><br>
-          </div>
-        </div>
-    
-  </div>
-  
-   <div class="panel">
-   
-        <div class="panel-heading">
+          <div class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#accordionTwo">
-                Amenities
+              <a data-toggle="collapse" data-parent="#accordion2" href="#accordionOne">
+                Hotel Details & Contact Info
               </a>
             </h4>
-        </div>
-		
-        <div id="accordionTwo" class="panel-collapse collapse">
-          <div class="panel-body">
-           <%= @detail["HotelDetails"]["amenitiesDescription"] %><br><br>
-           <%= @detail["HotelDetails"]["businessAmenitiesDescription"] %>
-
           </div>
-        </div>
-  </div>
-  
-  <div class="panel">
-  
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#accordionThree">
-              Map
-            </a>
-          </h4>
-        </div>
-    
-        <div id="accordionThree" class="panel-collapse collapse">
-          <div class="panel-body">
-            <div id="google-map"></div>
-          </div>
-        </div> 
-  </div>
 
-
-   <div class="panel">
-	  
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#accordionFour">
-              Ratings & Reviews
-            </a>
-          </h4>
-        </div>
-		 
-        <div id="accordionFour" class="panel-collapse collapse">
-          <div class="panel-body">
-            Reviews: <%= @detail["HotelSummary"]["tripAdvisorReviewCount"] %> <br>
-            <%= image_tag @detail["HotelSummary"]["tripAdvisorRatingUrl"] %>
-          </div>
-        </div>
-		
-   </div>
-
+          <div id="accordionOne" class="accordion-body collapse">
+            <div class="panel-body">
+            <%= @detail["HotelSummary"]["name"].gsub(/&amp;/, '&') %><br>
+            <%= @detail["HotelSummary"]["address1"] %><br>
+            <%= @detail["HotelSummary"]["city"] %>,
+            <%= @detail["HotelSummary"]["stateProvinceCode"] %><br>
+            </div>
+          </div> 
+    </div>
 
     <div class="panel">
-  
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#accordionFive">
-              Check In Information
-            </a>
-          </h4>
-        </div>
     
-        <div id="accordionFive" class="panel-collapse collapse">
-          <div class="panel-body">
-          Check In:
-          <%= @detail["HotelDetails"]["checkInTime"] %><br>
-          Check Out:
-          <%= @detail["HotelDetails"]["checkOutTime"]%><br><br>
-          <%= @detail["HotelDetails"]["checkInInstructions"].gsub(/<[^<>]*>/, "") %>
+        <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion2" href="#accordionFive">
+                Check In Information
+              </a>
+            </h4>
           </div>
+      
+          <div id="accordionFive" class="accordion-body collapse">
+            <div class="panel-body" >
+            <%= @shovel["checkInInstructions"].gsub(/<[^<>]*>/, "") %><br><br>
+            <%= @detail["HotelDetails"]["checkInInstructions"].gsub(/<[^<>]*>/, "") %>
+            </div>
         </div>
     </div>
+    
+     <div class="panel">
+     
+          <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion2" href="#accordionTwo">
+                  Amenities
+                </a>
+              </h4>
+          </div>
+  		
+          <div id="accordionTwo" class="accordion-body collapse">
+            <div class="panel-body" >
+             <%= @detail["HotelDetails"]["amenitiesDescription"] %><br><br>
+             <%= @detail["HotelDetails"]["businessAmenitiesDescription"] %>
+
+            </div>
+          </div>
+    </div>
+    
+    <div class="panel">
+    
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion2" href="#accordionThree">
+                Map
+              </a>
+            </h4>
+          </div>
+      
+          <div id="accordionThree" class="accordion-body collapse">
+            <div class="panel-body" >
+              <div id="google-map"></div>
+            </div>
+          </div> 
+    </div>
+
+
+     <div class="panel">
+  	  
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion2" href="#accordionFour">
+                Ratings & Reviews
+              </a>
+            </h4>
+          </div>
+  		 
+          <div id="accordionFour" class="accordion-body collapse">
+            <div class="panel-body" >
+              Reviews: <%= @detail["HotelSummary"]["tripAdvisorReviewCount"] %> <br>
+              <%= image_tag @detail["HotelSummary"]["tripAdvisorRatingUrl"] %>
+            </div>
+          </div>
+  		
+     </div>
+
+
+
   </div>
 </div>
 

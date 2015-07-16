@@ -97,7 +97,7 @@
 							<% room_response["BedTypes"]["BedType"].each do |bed| %>
 							<div class="bedtypes">
 								<div class="bed-description">
-									<%= room_response["BedTypes"]["BedType"]["description"] %>
+									<%= bed["description"] %>
 								</div>
 								<div class="book-now">
 										<%= button_tag 'BOOK NOW', :class => 'search-container' %>
