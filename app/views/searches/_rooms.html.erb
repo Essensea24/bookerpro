@@ -37,8 +37,10 @@
 					<% if room_response["BedTypes"] %>
 						<% if room_response["BedTypes"]["BedType"].instance_of? Array %>
 							<% room_response["BedTypes"]["BedType"].each do |bed| %>
-								<div class ="bedtypes">	
-									<%= bed["description"] %><br>
+								<div class="bedtypes">
+									<div class="bed-description">
+										<%= bed["description"] %>
+									</div>
 									<div class="book-now">
 										<%= button_tag 'BOOK NOW', :class => 'search-container' %>
 									</div>
@@ -46,10 +48,12 @@
 							<% end %>
 						<% else %>
 							<div class="bedtypes">
-								<%= room_response["BedTypes"]["BedType"]["description"] %>
-									<div class="book-now">
-										<%= button_tag 'BOOK NOW', :class => 'search-container' %>
-									</div>
+								<div class="bed-description">
+									<%= room_response["BedTypes"]["BedType"]["description"] %>
+								</div>
+								<div class="book-now">
+									<%= button_tag 'BOOK NOW', :class => 'search-container' %>
+								</div>
 							</div>
 						<% end %>
 					<% end %>
@@ -91,19 +95,23 @@
 					<% if room_response["BedTypes"] %>
 						<% if room_response["BedTypes"]["BedType"].instance_of? Array %>
 							<% room_response["BedTypes"]["BedType"].each do |bed| %>
-								<div class ="bedtypes">	
-									<%= bed["description"] %><br>
-									<div class="book-now">
-										<%= button_tag 'BOOK NOW', :class => 'search-container' %>
-									</div>
+							<div class="bedtypes">
+								<div class="bed-description">
+									<%= bed["description"] %>
 								</div>
+								<div class="book-now">
+										<%= button_tag 'BOOK NOW', :class => 'search-container' %>
+								</div>
+							</div>
 							<% end %>
 						<% else %>
 							<div class="bedtypes">
-								<%= room_response["BedTypes"]["BedType"]["description"] %>
-									<div class="book-now">
-										<%= button_tag 'BOOK NOW', :class => 'search-container' %>
-									</div>
+								<div class="bed-description">
+									<%= room_response["BedTypes"]["BedType"]["description"] %>
+								</div>
+								<div class="book-now">
+									<%= button_tag 'BOOK NOW', :class => 'search-container' %>
+								</div>
 							</div>
 						<% end %>
 					<% end %>

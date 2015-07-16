@@ -11,10 +11,11 @@
 
 .individual-room-container {
 	width: 48%;
-	height: 50vh;
+	height: 70vh;
 	position: relative;
 	border: 1px rgba(0,0,0,0.1) solid;
-	margin: 20px 5px;
+	border-radius: 2px;
+	margin: 20px 0;
 	overflow: hidden;
 	display: inline-block;
 	text-align: left;
@@ -37,7 +38,6 @@
 	top: 46%;
 	height: 33px;
 	left: 0px;
-	padding: 2px;
 	border-bottom-right-radius: 2px;
 	border-top-right-radius: 2px;
 }
@@ -47,7 +47,8 @@
 	font-family: 'Lato';
 	font-weight: 400;
 	height: 40px;
-	margin-bottom: 5px;
+	padding: 1vh .5vw 1vh 0;
+	margin-bottom: 2vh;
 }
 
 .room-description {
@@ -71,23 +72,35 @@
 	font-weight: 300;
 	border-top: 1px solid rgba(0,0,0,.3);
 	border-bottom: 1px solid rgba(0,0,0,.3);
-	height: 6vh;
-	padding: 1vh;
+	height: 8vh;
+	padding: 1vh .5vw 1vh 0;
+	display: block;
+	margin-top: 2vh;
+
+
+}
+
+.bedtypes .bed-description {
+	float: left;
+	display: inline-block;
+	height: 100%;
 }
 
 .bedtypes .book-now {
 	display: inline-block;
 	float: right;
+	position: relative;
+
 }
 .bedtypes .search-container {
 	background-color: #3598CB;
 	color: #fff;
-	margin-top: -1vh;
+	top: 0;
+
 }
 
 .bedtypes BUTTON {
 	border: 1px solid rgba(0,0,0,.2);
-	height: 5vh;
 
 }
 
