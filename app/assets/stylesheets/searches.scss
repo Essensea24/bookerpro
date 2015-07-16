@@ -54,29 +54,31 @@ a {
 	right: 0;
 }
 /* run this CSS if the screen size is larger than 250px */
-@media screen and (min-width: 250px) {
+@media screen and (min-width: 300px) {
 	.results-image img {
-		width: 300px;
-		height: 240px;
+		width: 90vw;
+		height: 40vh;
 		display: inline-block;
 		margin: 0 auto;
+		box-shadow: none;
 	}
 	.results-image-inner {
 		position: relative;
 		display: inline-block;
 	}
 	.hotel-wrapper {
-		height: 300px;
+		height: 400px;
 		padding-bottom: 240px;
 		display: inline-block;
 	}
 	.all-hotels {
-		width: 300px;
-		height: 240px;
-		margin-top: 60px;
-		margin-bottom: 70px;
-		margin-left: 50px;
-		margin-right: 50px;
+		width: 90vw;
+		height: 55vh;
+		margin-top: 100px;
+		margin-bottom: 100px;
+		/*margin-left: 50px;
+		margin-right: 50px;*/
+		margin: 15px 5vw 5vw;
 	}
 	#google-map {
 		height: 30vh;
@@ -98,7 +100,7 @@ a {
 		margin: 0 auto;
 	}
 	.all-hotels:last-child {
-		margin-bottom: 50vh;
+		margin-bottom: 37vh;
 	}
 }
 	/* run this CSS if the screen size is larger than 600px */
