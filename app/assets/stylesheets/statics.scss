@@ -38,13 +38,13 @@ h3 {
 	position: fixed;
 }
 #homepage-float {
-    background-color: rgba(0, 0, 0, 0.6);
-    border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.75);
     width: 100vw;
     height: 15vh;
     position: absolute;
     bottom: 10vh;
     text-align: center;
+    padding: 2vh;
 }
 #search-bar {
 	position: relative;
@@ -54,11 +54,40 @@ h3 {
 	position: relative;
 	top: 5vh;
 }
-.search-container {
-	height: 6vh;
-	top: 6vh;
-	border-radius: 3px;
+.search-container { 
+	padding: 0;
+	text-align: left;
+	font-family: 'Lato';
+	font-weight: 400;
 }
+
+.searchpartial .search-container {
+	border: 1px solid #ECECEC;
+}
+
+.searchpartial #autocomplete {
+	border: 1px solid #ECECEC;
+	height: 7vh;
+}
+
+.searchpartial FORM {
+	padding: 0;
+}
+
+.searchpartial .submit-button {
+	background-color: #3598CB;
+	color: #fff;
+	border: 1px #ECECEC solid;
+	width: 15%;
+	text-align: center;
+	font-weight: 400;
+}
+
+.searchpartial .destination {
+	border: 1px solid #ECECEC;
+	height: 7vh;
+}
+
 /* run this CSS if the screen size is larger than 250px */
 @media screen and (min-width: 250px) {
 	.homepage-title {
@@ -71,16 +100,40 @@ h3 {
 	#homepage-photo {
 		height: 100vh;
 	}
-	#locationField {
+	.searchpartial #locationField {
 		width: 80%;
+		display: block;
+		margin: 0 auto;
 	}
-	.datepicker {
-		width: 39%;
-		margin: 0.5%;
+
+	.searchpartial #autocomplete {
+		width: 100%;
+		display: block;
+		border-top-left-radius: 2px;
+		border-top-right-radius: 2px;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+		margin: 0 auto;
+		height: 7vh;
 	}
-	.submit-button {
-		width: 30%;
-		margin: 1%;
+	.searchpartial .datepicker {
+		width: 40%;
+		margin: -2px;
+		border-radius: 0px;
+		height: 7vh;
+	}
+	.searchpartial .submit-button {
+		width: 80%;
+		display: block;
+		margin: 0 auto;
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+		border-bottom-left-radius: 2px;
+		border-bottom-right-radius: 2px;
+		height: 7vh;
+	}
+	.searchpartial .search-container {
+		border-radius: 2px;	
 	}
 }
 /* run this CSS if the screen size is larger than 690px */
@@ -95,16 +148,45 @@ h3 {
 	#homepage-photo {
 		height: 100vh;
 	}
-	#locationField {
-		width: 30%;
-		margin: 0.5%;
+	.searchpartial #locationField {
+		margin: -5px;
+		width: 35%;
+		display: inline-block;
 	}
-	.datepicker {
-		width: 20%;
-		margin: 0.5%;
+
+	.searchpartial #autocomplete {
+		border-top-left-radius: 2px;
+		border-top-right-radius: 0px;
+		border-bottom-left-radius: 2px;
+		border-bottom-right-radius: 0px;
+		height: 7vh;
+		display: inline-block;
+}
+	.searchpartial .datepicker {
+		border-radius: 0;
+		width: 12%;
 	}
-	.submit-button {
-		width: 20%;
+	.searchpartial .submit-button {
+		border-top-right-radius: 2px;
+		border-bottom-right-radius: 2px;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
 		margin: 0.5%;
+		width: 15%;
+		display: inline-block;
 	}
+
+	.searchpartial .search-container {
+		height: 7vh;
+		margin: -2px;
+		padding-left: 10px;
+	}
+
+	.search-container {
+		height: 7vh;
+		top: 6vh;
+		border-radius: 3px;
+		font-size: 16px;
+	}
+
 }
