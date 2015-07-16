@@ -1,4 +1,8 @@
 class SearchesController < ApplicationController
+
+  # def index
+  #   @searches = Search.paginate(:page => params[:page], :per_page => 7)
+  # end
   
   def show
     response = ShowRemote.find(params[:hotelId], params[:options])
