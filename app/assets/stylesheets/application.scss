@@ -34,7 +34,11 @@ body {
 .navbar {
 	background: #fff;
 	height: 5vh;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3) !important
+
 }
+
+
 
 
 .container-fluid {
@@ -56,4 +60,9 @@ body {
 	width: 20px;
 	height: 20px;
 
+}
+
+.tag {
+	width: 20px;
+	height: 20px;
 }

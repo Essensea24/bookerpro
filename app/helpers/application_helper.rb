@@ -10,3 +10,11 @@ module ApplicationHelper
     output.html_safe
   end
 end
+
+  def render_pricetag(value)
+    output = ''
+    if value == 'true'
+       output += image_tag('Tag.png', :class => 'tag')
+    end
+     output.html_safe
+  end

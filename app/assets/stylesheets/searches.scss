@@ -28,6 +28,8 @@ a {
 .price-info {
 	font-size: 20px;
 	color: white;
+	margin-right: 5px;
+	
 }
 .price-box {
 	background-color: rgba(0,0,0,0.8);
@@ -35,8 +37,11 @@ a {
 	text-align: center;
 	display: inline-block;
 	position: relative;
-	bottom: 40px;
+	bottom: 45px;
 	left: 0px;
+	padding: 2px;
+	border-bottom-right-radius: 2px;
+	border-top-right-radius: 2px;
 }
 .map-wrapper {
 	position: fixed;
