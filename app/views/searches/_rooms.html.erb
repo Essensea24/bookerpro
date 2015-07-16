@@ -47,7 +47,9 @@
 												<% else %>
 													<%= room_response["BedTypes"]["BedType"]["description"] %>
 												<% end %>
-												<%= button_tag 'BOOK NOW', :class => 'search-container' %>
+												<div class="book-now">
+													<%= button_tag 'Book Now', :class => 'search-container' %>
+												</div>
 											</div>
 										<% end %>
 								</div>
@@ -88,14 +90,16 @@
 									</div>
 										<% if room_response["BedTypes"] %>
 											<div class ="bedtypes">
-											<% if room_response["BedTypes"]["BedType"].instance_of? Array %>
-												<% room_response["BedTypes"]["BedType"].each do |bed| %>	
-														<%= bed["description"] %><br>
+												<% if room_response["BedTypes"]["BedType"].instance_of? Array %>
+													<% room_response["BedTypes"]["BedType"].each do |bed| %>	
+															<%= bed["description"] %><br>
+													<% end %>
+												<% else %>
+													<%= room_response["BedTypes"]["BedType"]["description"] %>
 												<% end %>
-											<% else %>
-												<%= room_response["BedTypes"]["BedType"]["description"] %>
-											<% end %>
-											<%= button_tag 'BOOK NOW', :class => 'search-container' %>
+												<div class="book-now">
+													<%= button_tag 'Book Now', :class => 'search-container' %>
+												</div>
 											</div>
 										<% end %>
 								<% end %>

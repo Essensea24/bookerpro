@@ -26,9 +26,7 @@
 	display: inline-block;
 }
 
-.bedtypes {
-	border: 1px solid black;
-}
+
 
 .individual-room-container .price-box {
 	background-color: rgba(0,0,0,0.8);
@@ -64,6 +62,31 @@
 	font-size: 12px;
 	margin-top: 2px	;
 
+}
+
+.bedtypes {
+	font-size: 15px;
+	font-family: 'Lato';
+	font-weight: 300;
+	border-top: 1px solid rgba(0,0,0,.3);
+	border-bottom: 1px solid rgba(0,0,0,.3);
+	height: 6vh;
+	padding: 1vh;
+}
+
+.bedtypes .book-now {
+	display: inline-block;
+	float: right;
+}
+.bedtypes .search-container {
+	background-color: #3598CB;
+	color: #fff;
+	margin-top: -1vh;
+}
+
+.bedtypes BUTTON {
+	border: 1px solid rgba(0,0,0,.2);
+	height: 5vh;
 
 }
 
